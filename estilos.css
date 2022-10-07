@@ -1,0 +1,68 @@
+﻿.despleg {
+    background: linear-gradient(#FFFAFA, #FAEB07);
+    margin-top: 0px;
+    font-family: Arial;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    text-align:center;
+    
+}
+.dws_menu img {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    float: left;
+}
+.dws_menu *{
+    margin: 0;
+    padding: 0;
+}
+.dws_menu ul,
+.dws_menu li{
+    list-style: none;
+    position:relative;
+    
+}
+.dws_menu > ul{
+    display: flex;
+    justify-content: center;
+}
+    .dws_menu > ul li a {
+        display: block;
+        padding: 45px 30px;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        color:#370101;
+    }
+.dws_menu li a:hover {
+    background: linear-gradient(#FFFAFA, #FAEB07);
+    
+    color: #833131;
+}
+
+/*submenu*/
+.dws_menu li ul {
+    position: absolute;
+    margin: 0px;
+    display: none;
+    
+}
+    .dws_menu li ul li a {
+        padding: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        
+    }
+
+
+.dws_menu li:hover ul {
+    display: block;
+    
+}
+.image img {
+    width: 100%;
+    height: auto;
+}
