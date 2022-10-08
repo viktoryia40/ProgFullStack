@@ -1,8 +1,22 @@
-﻿.despleg {
-    background: linear-gradient(#FFFAFA, #FAEB07);
+﻿/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Estilos generales*/
+
+body {
+    font-family: 'Inter';
+}
+
+/*Barra de navegación*/
+
+.despleg {
+    background: linear-gradient(#FFFAFA, #f0e552);
     margin-top: 0px;
-    font-family: Arial;
-    position: absolute;
+  /*font-family: Arial;*/
+  /*position: absolute; */ /*Le saque esta propiedad sino quedaba por encima del contenido de la página*/
     width: 100%;
     box-sizing: border-box;
     text-align:center;
@@ -38,7 +52,7 @@
         color:#370101;
     }
 .dws_menu li a:hover {
-    background: linear-gradient(#FFFAFA, #FAEB07);
+    background: linear-gradient(#FFFAFA, #f0e552);
     
     color: #833131;
 }
@@ -48,6 +62,7 @@
     position: absolute;
     margin: 0px;
     display: none;
+    background-color: #f0e552; /*Le agregué el color de fondo porque sino al desplegar las opciones se confundía con el texto de contenido de la pag*/
     
 }
     .dws_menu li ul li a {
@@ -66,3 +81,104 @@
     width: 100%;
     height: auto;
 }
+
+/*main Mascotas perdidas*/
+
+.publicaciones {
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "descripcion descripcion"
+    "enlace enlace"
+    "filtros posts";
+    column-gap: 1em;
+    color: #833131;
+}
+
+.publicaciones h1 {
+    grid-area: titulo;
+    justify-self: center;
+    margin-top: 0.3em;
+}
+
+.publicaciones p {
+    grid-area: descripcion;
+    margin-left: 0.3em;
+    justify-self: center;
+    font-weight: 500;
+}
+
+#enlaceForm {
+    grid-area: enlace;
+    border: 0.1em solid #370101;
+    background-color: #e5e9dc;
+    padding: 0.5em;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+#enlaceForm a {
+    color: #4d660d;
+}
+
+.filtros {
+    grid-area: filtros;
+    background-color: #ece697;
+    padding-right: 0;
+    padding-left: 0;
+    font-weight: 400;
+    color: #370101;
+}
+
+.ulPrincipal {
+    padding-left: 0.5em;
+}
+
+.ulPrincipal li {
+    list-style: none;
+    padding-top: 0.3em;
+    font-size: 1em;
+    padding-left: 0em;
+}
+
+.ulSecundaria {
+    padding-left: 1.3em;
+    padding-right: 0.3em;
+}
+
+.ulSecundaria li{
+    list-style: none;
+    padding: 0.2em;
+    font-size: 0.9em;
+}
+
+.publicaciones section {
+    grid-area: posts;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.publicaciones .card {
+    justify-self: center;
+    width: 100%;
+}
+
+.publicaciones .btn-primary {
+    background-color: #829c42;
+    border-color: #829c42;
+}
+
+.publicaciones .btn-primary:active,
+.btn-primary:hover {
+    background-color: #370101;
+    border-color: #370101;
+}
+
+
+
+
+   
+
+
+
