@@ -2,12 +2,80 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url(imagenes/logo.jpg);
+    background-image: url(imagenes/logos.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter';
  
+}
+/* Navbar*/
+.despleg {
+    background: linear-gradient(#FFFAFA, #f0e552);
+    margin-top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align:center;
+    
+}
+.dws_menu img {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    float: left;
+}
+.dws_menu *{
+    margin: 0;
+    padding: 0;
+}
+.dws_menu ul,
+.dws_menu li{
+    list-style: none;
+    position:relative;
+    
+}
+.dws_menu > ul{
+    display: flex;
+    justify-content: center;
+}
+    .dws_menu > ul li a {
+        display: block;
+        padding: 45px 30px;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        color:#370101;
+    }
+.dws_menu li a:hover {
+    background: linear-gradient(#FFFAFA, #f0e552);
+    
+    color: #833131;
+}
+
+/*submenu*/
+.dws_menu li ul {
+    position: absolute;
+    margin: 0px;
+    display: none;
+    background-color: #f0e552; /*Le agregué el color de fondo porque sino al desplegar las opciones se confundía con el texto de contenido de la pag*/
+    
+}
+    .dws_menu li ul li a {
+        padding: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        
+    }
+
+
+.dws_menu li:hover ul {
+    display: block;
+    
+}
+.image img {
+    width: 100%;
+    height: auto;
 }
 .container{
     display: flex;
@@ -19,13 +87,16 @@ body{
 .container_form{
     background-color: #0a1e35;
     border-radius: 15px;
-    padding: 40px;
+    padding:20px;
+    position: relative;
+    top: 10px;
     opacity: 0.8;
 }
 img{
     height: 100px;
     width: 100px;
-    margin-left: 125px;
+    display:block;
+    margin:auto;
 }
 h2{
     text-align: center;
