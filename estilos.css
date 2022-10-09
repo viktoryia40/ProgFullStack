@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /*Estilos generales*/
@@ -174,6 +175,7 @@ body {
     background-color: #370101;
     border-color: #370101;
 }
+
 /****Pie de Pagina****/
 .pie-pagina{
     width: 100%;
@@ -241,6 +243,89 @@ body {
 
 }
 
+/*main Login*/
+
+.mainLogin {
+    background-image: url(imagenes/logos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 110vh;
+}
+.container_form{
+    background-color: #0a1e35;
+    border-radius: 15px;
+    padding:20px;
+    position: relative;
+    top: 10px;
+    opacity: 0.8;
+}
+
+.container_form img{
+    height: 100px;
+    width: 100px;
+    display:block;
+    margin:auto;
+}
+
+.container_form h2{
+    text-align: center;
+    color: white;
+}
+
+.container_form input{
+    display: block;
+    height: 40px;
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.container_form .check{
+    width: 15px;
+    height: 15px;
+    display: inline;
+}
+.container_form label{
+    color: white;
+}
+.container_form label:hover{
+    color: #b8b8b8b8;
+}
+.container_form a{
+    color: white;
+    text-decoration: none;
+    margin-left: 45px;
+}
+.container_form a:hover{
+    color: #b8b8b8b8;
+}
+.container_form .boton{
+    width: 150px;
+    border-radius: 15px;
+    background-color: green;
+    color: white;
+    margin-top: 30px;
+    border: none;
+    border-bottom: 4px solid #0b5a1c;
+    margin-left: 96px;
+}
+.container_form .boton:active{
+    background-color: #0b5a1c;
+    width: 145px;
+}
    
 
 
