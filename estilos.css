@@ -321,6 +321,8 @@ body {
     border: none;
     border-bottom: 4px solid #0b5a1c;
     margin-left: 96px;
+    display:block;
+    margin:auto;
 }
 .container_form .boton:active{
     background-color: #0b5a1c;
