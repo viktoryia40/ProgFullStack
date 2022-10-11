@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Medios de pago</title>
+</head>
+<body>
+	<div class="body-text">Por favor, elija un medio de pago
+    </div>
+  <form>
+    <div class="form-container">
+      <div class="-informacion personal">
+       
+        
+    <form method="post" action="tratamiento.php">
+    	<p>
+    		Medios de pago:<br/ >
+    	
+    	<input type="checkbox"name="tarjetas"id="tarjetas"/><label for="tarjetas">Tarjeta de Crédito/Débito</label><br/ >
+    	</form>
+      </div> <!-- fin de la información personal -->
+           
+          <input id="column-left" type="text" name="nombre" placeholder="Nombre"/>
+          <input id="column-right" type="text" name="apellido" placeholder="Apellido"/>
+          <input id="input-field" type="text" name="numero" placeholder="Número de tarjeta"/>
+          <input id="column-left" type="text" name="expiración" placeholder="MM / AA"/>
+          <input id="column-right" type="text" name="cvc" placeholder="CCV"/>
+         
+          <div class="card-wrapper"></div>
+      
+          <input id="input-field" type="text" name="numero de la calle" required="required" autocomplete="on" maxlength="45" placeholder="Nombre de la calle"/>
+          <input id="column-left" type="text" name="ciudad" required="required" autocomplete="on" maxlength="20" placeholder="Ciudad"/>
+          <input id="column-right" type="text" name="codigo postal" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="Codigo postal"/>
+          <input id="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/>
+          <input id="input-button" type="enviar" value="Enviar"/>
+        
+    </form>
+    
+  </div>
+
+    	<input type="checkbox"name="mercado de pago"id="mercado de pago"/><label for="mercado de pago">Mercadopago</label><br/ >
+    	<input type="checkbox"name="transferencia bancaria"id="transferencia bancaria"/><label for="transferencia bancaria">Transferencia Bancaria</label><br/ >
+
+    </p>
+    </form>
+      
+
+</body>
+</html>
