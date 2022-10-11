@@ -16,10 +16,7 @@ body {
 .despleg {
     background: linear-gradient(#FFFAFA, #f0e552);
     margin-top: 0px;
-  /*font-family: Arial;*/
-  /*position: absolute; */ /*Le saque esta propiedad sino quedaba por encima del contenido de la página*/
     width: 100%;
-    box-sizing: border-box;
     text-align:center;
     
 }
@@ -328,6 +325,48 @@ body {
     background-color: #0b5a1c;
     width: 145px;
 }
+
+/*Diseño para móvil*/
+
+@media screen and (max-width:575px) {
+
+    /*main perdidos-encontrados-enAdopcion*/
+
+    .publicaciones {
+        grid-template-columns: 30% auto;
+        gap: 0.3em;
+    }
+    .publicaciones p, #enlaceForm {
+        text-align: center;
+    }
+
+    .publicaciones section {
+       display: flex;
+       flex-direction: column;
+    }
+
+}
+
+/*Diseño para tablet*/
+
+@media screen and (min-width:576px) and (max-width:767px) {
+
+    /*main perdidos-encontrados-enAdopcion*/
+
+    .publicaciones {
+        grid-template-columns: 20% auto;
+        gap: 0.6em;
+    }
+    .publicaciones p, #enlaceForm {
+        text-align: center;
+    }
+
+    .publicaciones section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
    
 
 
