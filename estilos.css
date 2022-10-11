@@ -326,6 +326,59 @@ body {
     width: 145px;
 }
 
+
+
+/*Pagina de Contacto*/
+.formulario {
+    width: 40rem;
+    margin: auto;
+    background-color: #e5e9dc;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    border-radius: 2rem;
+}
+.contacto, .subtitulo {
+    color:#833131;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+input, textarea {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    border-color: #cdc76b;
+    border-radius: 0.5rem;
+}
+.btn {
+    display:block;
+    width: 10rem;
+    text-transform: uppercase;
+    color:#370101;
+    font-weight: 900;
+    padding: 1rem;
+    margin:auto;
+    text-align: center;
+    background-color:#f0e552;
+    transition: background-color 0.3s;
+    cursor:pointer;
+}
+.btn:hover {
+    background-color:#cdc76b ;
+}
+@media(max-width:480px) {
+    form {
+        width: 100%;
+    }
+}
+
+   
+
+
+
+
+
 /*Diseño para móvil*/
 
 @media screen and (max-width:575px) {
