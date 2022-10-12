@@ -853,10 +853,8 @@ body {
     .dws_menu li ul li a {
         padding: 10px;
         font-size: 14px;
-        text-transform: uppercase;
-        
+        text-transform: uppercase;       
     }
-
 
 .dws_menu li:hover ul {
     display: block;
