@@ -90,7 +90,7 @@ body {
     "enlace enlace"
     "filtros posts";
     column-gap: 1em;
-    color: #833131;
+    color: #000000;
 }
 
 .publicaciones h1 {
@@ -122,8 +122,8 @@ body {
 .filtros {
     grid-area: filtros;
     background-color: #ece697;
-    padding-right: 0;
-    padding-left: 0;
+    padding: 1em;
+    width: auto;
     font-weight: 400;
     color: #370101;
 }
@@ -155,22 +155,24 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
+    margin-right: 1.5em;
 }
 
 .publicaciones .card {
     justify-self: center;
+    text-align: center;
     width: 100%;
 }
 
 .publicaciones .btn-primary {
-    background-color: #829c42;
-    border-color: #829c42;
+    background-color: rgb(248, 219, 88);
+    border-color: #000000;
 }
 
 .publicaciones .btn-primary:active,
 .btn-primary:hover {
-    background-color: #370101;
-    border-color: #370101;
+    background-color: #d9cb83;
+    border-color: #000000;
 }
 
 /****Pie de Pagina****/
@@ -355,7 +357,7 @@ input, textarea {
     display:block;
     width: 10rem;
     text-transform: uppercase;
-    color:#370101;
+    color:#000000;
     font-weight: 900;
     padding: 1rem;
     margin:auto;
@@ -365,7 +367,7 @@ input, textarea {
     cursor:pointer;
 }
 .btn:hover {
-    background-color:#cdc76b ;
+    background-color: #d9cb83;
 }
 @media(max-width:480px) {
     form {
@@ -846,3 +848,22 @@ input[type="submit"]:hover{
     height: auto;
 }
 
+.publicaciones_productos h1 {
+    grid-area: titulo;
+    justify-self: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    font-size: 2em;
+    background-image: linear-gradient(120deg, #F09819,#EDDE5D 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 100%;
+}
+.publicaciones_productos p {
+    grid-area: descripcion;
+    justify-self: center;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
