@@ -426,7 +426,7 @@ input, textarea {
 .formato {
   padding: 60px 0;
   background-color: rgba(178,209,229,0.7);
-  margin: 0 auto;
+  margin: 10px auto;
   width: 600px;
 }
 .form-text {
@@ -436,6 +436,8 @@ input, textarea {
   color: #333;
   text-align: center;
   line-height: 1.2em;
+  
+  
 }
 .form-container {
   flex-direction: column;
@@ -459,7 +461,7 @@ h1 {
   font-family: "Roboto"
 }
 input {
-  margin: 1px 0;
+  margin: 10px 0;
   padding-left: 3%;
   font-size: 14px;
 }
@@ -468,12 +470,14 @@ input[type="text"]{
   height: 50px;
   width: 97%;
   border: none;
+  margin: 10px;
 }
 input[type="email"]{
   display: block;
   height: 50px;
   width: 97%;
   border: none;
+  margin: 10px;
 }
 input[type="submit"]{
   display: block;
