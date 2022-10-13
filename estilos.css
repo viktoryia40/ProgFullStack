@@ -786,7 +786,6 @@ input[type="submit"]:hover{
 
 
 /*Barra de navegación*/
-
 .despleg {
     background: linear-gradient(#FFFAFA, #f0e552);
     margin-top: 0px;
@@ -834,7 +833,7 @@ input[type="submit"]:hover{
     position: absolute;
     margin: 0px;
     display: none;
-    background-color: #f0e552; /*Le agregué el color de fondo porque sino al desplegar las opciones se confundía con el texto de contenido de la pag*/
+    background-color: #f0e552; 
     
 }
     .dws_menu li ul li a {
