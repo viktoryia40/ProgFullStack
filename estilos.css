@@ -619,18 +619,52 @@ input[type="submit"]:hover{
 }
 /*Registro de mascotas*/
 
-   .form-register{
-       width: 400px;
-       background: #24303c;
-       padding: 30px;
-       margin:auto;
-       margin-top: 100px;
-       border-radius: 4px;
-       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-       color: white;
-   
-   }
-   .form-register h4{
-       font-size: 22px;
-       margin-bottom: 20px;
-   }
+form{
+    width: 25%;
+    border: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+label{
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+
+textarea{
+    resize: vertical;
+    max-height: 300px;
+    min-height: 100px;
+}
+input, textarea{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+input:focus, textarea:focus{
+    border: 1px solid #1668c4
+
+}
+
+
+input[type="submit"]{
+    margin-bottom: o;
+    background: #1668c4;
+    color: #fff;
+    border: none;
+}
+    
+input[type="submit"]:hover{
+    
+    background: #4a88f4;
+    
+}
+    
+h4, p{
+    text-align: center;
+}

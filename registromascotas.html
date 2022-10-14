@@ -56,25 +56,16 @@
     </header>
 
     <section class="form-register">
-        <h4>Formulario Registro de Mascotas</h4>
-             <form class="formato" method="post" action="mascotar.php">
-                <label for="nombre">Nombre:</label><br/>
-                <input type="text" name="nombre" id="nombre"/><br>
-                <label for="nombre">Apellido:</label><br/>
-                <input type="text" name="apellido" id="apellido"/><br/>
-                <label for="email">Email:</label><br/>
-                <input type="email" name="email" id="email"/><br/>
-                <label for="fecha">Fecha:</label><br/>
-                <input type="date" name="fecha" id="fecha"/><br/>
-                <p>Marque lo que corresponda:<br/>
-                <input type="checkbox" name="Perdi a mi mascota" id="Perdi a mi mascota"/><label for="Perdi a mi mascota">Perdí a mi mascota</label><br/>
-                <input type="checkbox" name="Encontre una mascota" id="Encontre una mascota"/><label for="Encontre una mascota">Encontré una mascota</label><br/>
-                <label for="descripcion">Descripción de la mascota:</label><br/>
-                <textarea name="descripcion" id="descripcion" size="50"></textarea><br/>
-                <input type="submit"><br>
-                </p>
-
-            </form>
+        <h4>Formulario de Registro de Mascotas</h4>
+        <form>
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre y apellido">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Escribe tu email">
+            <label for="descripcion">Descripción de la mascota:</label>
+            <textarea id="descripcion"></textarea>
+            <input type="submit" value="Enviar">
+        </form>
                 
     </section>
     
