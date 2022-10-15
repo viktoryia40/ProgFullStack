@@ -415,126 +415,24 @@ input, textarea {
     }
 }
 
-/*Medios de pago*/
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500);
+/*Finalizar la Compra*/
 
-.formato {
-  padding: 60px 0;
-  background-color: rgba(178,209,229,0.7);
-  margin: 10px auto;
-  width: 600px;
-}
-.form-text {
-  padding: 0 20px 30px 20px;
-  font-family: "Roboto";
-  font-size: 1em;
-  color: #333;
-  text-align: center;
-  line-height: 1.2em;
-  
-  
-}
-.form-container {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.card-wrapper {
-  background-color: #6FB7E9;
-  width: 100%;
-  display: flex;
-
-}
-.personal-information {
-  background-color: #3C8DC5;
-  color: #fff;
-  padding: 1px 0;
-  text-align: center;
-}
-
-input {
-  margin: 10px 0;
-  padding-left: 3%;
-  font-size: 14px;
-}
-input[type="text"]{
-  display: block;
-  height: 50px;
-  width: 97%;
-  border: none;
-  margin: 10px;
-}
-input[type="email"]{
-  display: block;
-  height: 50px;
-  width: 97%;
-  border: none;
-  margin: 10px;
-}
-input[type="submit"]{
-  display: block;
-  height: 60px;
-  width: 100%;
-  border: none;
-  background-color: #3C8DC5;
-  color: #fff;
-  margin-top: 2px;
-  cursor: pointer;
-  font-size: 0.9em;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-}
-input[type="submit"]:hover{
-  background-color: #6FB7E9;
-  transition: 0.3s ease;
-}
-#column-left {
-  width: 46.5%;
-  float: left;
-  margin-bottom: 2px;
-}
-#column-right {
-  width: 46.5%;
-  float: right;
-}
-
-@media only screen and (max-width: 480px){
-  body {
-    width: 100%;
+form{
+    font-size: 20px;
     margin: 0 auto;
-  }
-  .form-container {
-    margin: 0 2%;
-  }
-  input {
-    font-size: 1em;
-  }
-  #input-button {
+    width: 300px;
+    background-color: #b1af49;
+    padding: 15px;
+
+}
+.btn{
     width: 100%;
-  }
-  #input-field {
-    width: 96.5%;
-  }
-  .form-container h1 {
-    font-size: 1.2em;
-  }
-  input {
-    margin: 2px 0;
-  }
-  input[type="submit"]{
-    height: 50px;
-  }
-  #column-left {
-    width: 96.5%;
-    display: block;
-    float: none;
-  }
-  #column-right {
-    width: 96.5%;
-    display: block;
-    float: none;
-  }
+    background-color: #1668c4;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
 }
 
 /*-----MascotAdopcion----*/
@@ -620,6 +518,7 @@ input[type="submit"]:hover{
 /*Registro de mascotas*/
 
 form{
+    margin: 0 auto;
     width: 25%;
     border: 20px;
     margin: 20px;
@@ -666,5 +565,6 @@ input[type="submit"]:hover{
 }
     
 h4{
-    text-align: center;
+    padding: 15px;
+    
 }
