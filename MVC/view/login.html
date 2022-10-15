@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="icon" href="./imagenes/Candado.jpg">
+	<!--Fuente Google Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+	 <!--Fuente fontawesome-->
+	 <script src="https://kit.fontawesome.com/98b3766597.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+	<header class="despleg">
+		<nav class="dws_menu">
+			<a href="inicio.html">
+				<img src="imagenes/logo.png" alt="logo" />
+			</a>
+			<ul>
+				<li><a href="inicio.html">Inicio</a></li>
+				<li>
+					<a href="#">Buscador de mascotas</a>
+					<ul>
+						<li><a href="./perdidos.html">Mascotas perdidas</a></li>
+						<li><a href="encontrados.html">Mascotas encontradas</a></li>
+						<li><a href="registromascotas.html">Registrar una mascota</a></li>
+					</ul>
+				</li>
+				<li><a href="MascotAdopcion.html">Mascotas en adopción</a></li>
+				<li>	
+					<a href="#">Productos</a>
+					<ul>
+						<li><a href="productos.html">ver Productos</a></li>
+						<li><a href="carrito.html">Carrito</a></li>
+						<li><a href="Mediosdepago.html">Finalizar la compra</a></li>
+					</ul>
+				</li>
+				<li><a href="contacto.html">Contáctanos</a></li>
+				<li>
+					<a href="login.html">Login</a>
+					<ul>
+						<li><a href="registro_us.html">Registro</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>	
+	</header>
+
+	<main class="mainLogin">
+		<div class="container">
+			<div class="container_form">
+				<img src="./imagenes/Candado.jpg" alt="Esto es una imagen de un candado">
+				<h2>Iniciar sesión</h2>
+				<form action="">
+					<input type="text" placeholder="usuario">
+					<input type="password" placeholder="password">
+					<input class="check" type="checkbox" id="checkid">
+					<label for="checkid">Recuerdame</label>
+					<a href="#">¿Olvidaste tú contraseña?</a>
+					<input class="boton" type="submit" value="Iniciar sesión">
+				</form>
+			  </div>
+		</div>
+	</main>
+     <!---footer----->
+	 <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="imagenes/logo.png" alt= "Logo de MascotAR">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Nuestra misión es el bienestar de los animales, el objetivo principal  de este espacio es ayudar a los animales domésticos, brindando la posibilidad a que se pueden realizar publicaciones de mascotas perdidas o encontradas, con el fin de lograr el reencuentro con sus familias; o también de encontrar una a aquellos que no la tengan.</p>
+                <p><b>"Los animales no son propiedades o cosas,sino seres vivos que merecen nuestra compasión,respeto,amistad y apoyo"</b></p>
+            </div>
+
+            <div class="box">
+                <h2>SEGUINOS</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2022 <b>MascotAR</b> - Todos los Derechos Reservados - Desarrollado por <b>Optimos WEB</b></small>
+        </div>
+    </footer>
+	
+ 
+
+</body>
+</html>
