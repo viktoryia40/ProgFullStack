@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
    
 }
 
@@ -18,7 +19,6 @@ body {
     margin-top: 0px;
     width: 100%;
     text-align:center;
-    
 }
 .dws_menu img {
     width: 100px;
@@ -67,10 +67,7 @@ body {
         padding: 10px;
         font-size: 14px;
         text-transform: uppercase;
-        
-    }
-
-
+}
 .dws_menu li:hover ul {
     display: block;
     
@@ -79,6 +76,11 @@ body {
     width: 100%;
     height: auto;
 }
+
+@media screen and (max-width: 500) {
+    
+}
+
 
 /*main Mascotas perdidas-encontradas*/
 
@@ -410,7 +412,7 @@ input, textarea {
     background-color: #d9cb83;
 }
 @media(max-width:480px) {
-    form {
+    .formulario {
         width: 100%;
     }
 }
@@ -419,10 +421,12 @@ input, textarea {
 
 .finalizar{
     font-size: 20px;
-    margin: 0 auto;
+    margin: 10px auto;
     width: 300px;
     background-color: #b1af49;
-    padding: 15px;
+    padding: 20px;
+    
+    
 
 }
 .btn{
@@ -516,55 +520,68 @@ input, textarea {
     margin-bottom: 2em;
 }
 /*Registro de mascotas*/
-
-form{
+.photo{
+    background-image: url(https://tse4.mm.bing.net/th?id=OIP.pdcSzwNUfMl7To3cKlwEmwHaFB&pid=Api&P=0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.registro_mascotas{
     margin: 0 auto;
-    width: 25%;
+    width: 30%;
     border: 20px;
     margin: 20px;
     padding: 20px;
+    background-color: #e6d8d6;
+    border-radius: 10px;
 }
-
-
-label{
+.registro_mascotas label{
     font-size: 14px;
     display: block;
     width: 100%;
 }
-
-textarea{
+.registro_mascotas textarea{
     resize: vertical;
     max-height: 300px;
     min-height: 100px;
 }
-input, textarea{
+.registro_mascotas input, textarea{
     margin-bottom: 20px;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(231, 198, 175);
+    border-radius: 20px;
 }
 
-input:focus, textarea:focus{
-    border: 1px solid #1668c4
+.registro_mascotas input:focus, textarea:focus{
+    outline: none;
 
 }
-
-
-input[type="submit"]{
-    margin-bottom: o;
-    background: #1668c4;
+.registro_mascotas input[type="submit"]{
     color: #fff;
     border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 00 20px rgba(0, 0, 0, .1);
+    width: 140px;
+    height: 60px;
+    display:block;
+    margin:auto;
+}
+.registro_mascotas input[type="submit"]:hover{
+    background-position: right center;
+    color: #370101;
 }
     
-input[type="submit"]:hover{
-    
-    background: #4a88f4;
-    
-}
-    
-h4{
+.regis_mas h4{
     padding: 15px;
-    
+    font-size: 28px;
+    font-style: italic;
+    color: #4e2714;
+    text-shadow: 3px 5px 6px #f7f4f4;
 }
