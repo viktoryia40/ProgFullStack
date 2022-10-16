@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 
 /*Estilos generales*/
@@ -18,7 +19,6 @@ body {
     margin-top: 0px;
     width: 100%;
     text-align:center;
-    
 }
 .dws_menu img {
     width: 100px;
@@ -67,10 +67,7 @@ body {
         padding: 10px;
         font-size: 14px;
         text-transform: uppercase;
-        
-    }
-
-
+}
 .dws_menu li:hover ul {
     display: block;
     
@@ -79,6 +76,11 @@ body {
     width: 100%;
     height: auto;
 }
+
+@media screen and (max-width: 500) {
+    
+}
+
 
 /*main Mascotas perdidas-encontradas*/
 
@@ -413,131 +415,31 @@ input, textarea {
     background-color: #d9cb83;
 }
 @media(max-width:480px) {
-    form {
+    .formulario {
         width: 100%;
     }
 }
 
-/*Medios de pago*/
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500);
+/*Finalizar la Compra*/
 
-.formato {
-  padding: 60px 0;
-  background-color: rgba(178,209,229,0.7);
-  margin: 10px auto;
-  width: 600px;
-}
-.form-text {
-  padding: 0 20px 30px 20px;
-  font-family: "Roboto";
-  font-size: 1em;
-  color: #333;
-  text-align: center;
-  line-height: 1.2em;
-  
-  
-}
-.form-container {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.card-wrapper {
-  background-color: #6FB7E9;
-  width: 100%;
-  display: flex;
+.finalizar{
+    font-size: 20px;
+    margin: 10px auto;
+    width: 300px;
+    background-color: #b1af49;
+    padding: 20px;
+    
+    
 
 }
-.personal-information {
-  background-color: #3C8DC5;
-  color: #fff;
-  padding: 1px 0;
-  text-align: center;
-}
-
-input {
-  margin: 10px 0;
-  padding-left: 3%;
-  font-size: 14px;
-}
-input[type="text"]{
-  display: block;
-  height: 50px;
-  width: 97%;
-  border: none;
-  margin: 10px;
-}
-input[type="email"]{
-  display: block;
-  height: 50px;
-  width: 97%;
-  border: none;
-  margin: 10px;
-}
-input[type="submit"]{
-  display: block;
-  height: 60px;
-  width: 100%;
-  border: none;
-  background-color: #3C8DC5;
-  color: #fff;
-  margin-top: 2px;
-  cursor: pointer;
-  font-size: 0.9em;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-}
-input[type="submit"]:hover{
-  background-color: #6FB7E9;
-  transition: 0.3s ease;
-}
-#column-left {
-  width: 46.5%;
-  float: left;
-  margin-bottom: 2px;
-}
-#column-right {
-  width: 46.5%;
-  float: right;
-}
-
-@media only screen and (max-width: 480px){
-  body {
+.btn{
     width: 100%;
-    margin: 0 auto;
-  }
-  .form-container {
-    margin: 0 2%;
-  }
-  input {
-    font-size: 1em;
-  }
-  #input-button {
-    width: 100%;
-  }
-  #input-field {
-    width: 96.5%;
-  }
-  .form-container h1 {
-    font-size: 1.2em;
-  }
-  input {
-    margin: 2px 0;
-  }
-  input[type="submit"]{
-    height: 50px;
-  }
-  #column-left {
-    width: 96.5%;
-    display: block;
-    float: none;
-  }
-  #column-right {
-    width: 96.5%;
-    display: block;
-    float: none;
-  }
+    background-color: #1668c4;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
 }
 
 /*-----MascotAdopcion----*/
@@ -621,19 +523,68 @@ input[type="submit"]:hover{
     margin-bottom: 2em;
 }
 /*Registro de mascotas*/
+.photo{
+    background-image: url(https://tse4.mm.bing.net/th?id=OIP.pdcSzwNUfMl7To3cKlwEmwHaFB&pid=Api&P=0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.registro_mascotas{
+    margin: 0 auto;
+    width: 30%;
+    border: 20px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #e6d8d6;
+    border-radius: 10px;
+}
+.registro_mascotas label{
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+.registro_mascotas textarea{
+    resize: vertical;
+    max-height: 300px;
+    min-height: 100px;
+}
+.registro_mascotas input, textarea{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(231, 198, 175);
+    border-radius: 20px;
+}
 
-   .form-register{
-       width: 400px;
-       background: #24303c;
-       padding: 30px;
-       margin:auto;
-       margin-top: 100px;
-       border-radius: 4px;
-       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-       color: white;
-   
-   }
-   .form-register h4{
-       font-size: 22px;
-       margin-bottom: 20px;
-   }
+.registro_mascotas input:focus, textarea:focus{
+    outline: none;
+
+}
+.registro_mascotas input[type="submit"]{
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 00 20px rgba(0, 0, 0, .1);
+    width: 140px;
+    height: 60px;
+    display:block;
+    margin:auto;
+}
+.registro_mascotas input[type="submit"]:hover{
+    background-position: right center;
+    color: #370101;
+}
+    
+.regis_mas h4{
+    padding: 15px;
+    font-size: 28px;
+    font-style: italic;
+    color: #4e2714;
+    text-shadow: 3px 5px 6px #f7f4f4;
+}

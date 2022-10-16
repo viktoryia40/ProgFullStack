@@ -12,7 +12,7 @@
       <script src="https://kit.fontawesome.com/98b3766597.js" crossorigin="anonymous"></script>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="estilos.css">
      <!---link favicon-->
      <link rel="icon" type="icon/png" href="imagenes/mascotar.favi.png">
     <title>Contacto</title>
@@ -51,21 +51,48 @@
                 </li>
             </ul>
         </nav>	
-    </header>s
-
-
+    </header>
 
 <body>
- <form class="formulario" action="">
-    <h2 class="contacto">Contacto</h2>
-    <p class="subtitulo">Escribenos y la brevedad nos pondremos en contacto con vos</p>
-    <input type="text" name="Nombre" placeholder="Nombre">
-    <input type="text" name="Apellido" placeholder="Apellido">
-    <input type="tel" name="phone" placeholder="Tu telefono">
-    <input type="email" name="email" placeholder="Tu E-mail">
-    <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Escriba aqui su mensaje..."></textarea>
-    <input class="btn" type="submit" value="Enviar" >
- </form>
+    
+        <fieldset class="finalizar">
+         <legend>Elije opción de envío y pago</legend>
+         <label>Metodo de envío:</label>
+         <select name="Metodo de envío">
+             <option value="Retiro en tienda">Retiro en tienda</option>
+             <option value="Envío a domicilio">Envío a domicilio</option>
+         </select>
+         
+     <p>
+     <label>Dirección</label>
+         <input type="tel" name="Dirección" size="26px">
+     </p>
+     <p>
+         <label>Codigo postal</label>
+             <input type="tel" name="Código Postal" size="26px">
+         </p>
+     <p>
+     
+             <label>Localidad</label>
+             <input type="tel" name="Localidad" size="26px">
+         </p>
+         <p>
+             <label>Provincia</label>
+             <input type="tel" name="Provincia" size="26px">
+         </p>
+         <label>Forma de Pago:</label>
+         <select name="Forma de Pago">
+             <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+             <option value="MercadoPago">MercadoPago</option>
+         </select>
+ 
+     <p>
+         <input class="btn" type="submit" value="Enviar" >
+     </p>    
+     </fieldset>
+ 
+      </form>   
+ </body>
  <footer class="pie-pagina">
     <div class="grupo-1">
         <div class="box">
