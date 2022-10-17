@@ -101,7 +101,7 @@ body {
     left: 12px;
     font-size: 18px;
 }
-@media all and (max-width:800px) {
+@media all and (max-width:1200px) {
     .dws_menu {
         overflow: hidden;
 }
@@ -686,4 +686,76 @@ input, textarea {
     font-weight: 400;
     font-size: 1.2em;
     margin-bottom: 2em;
+}
+/*Registro de mascotas*/
+.photo {
+    background-image: url(https://tse4.mm.bing.net/th?id=OIP.pdcSzwNUfMl7To3cKlwEmwHaFB&pid=Api&P=0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.registro_mascotas {
+    margin: 0 auto;
+    width: 30%;
+    border: 20px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #e6d8d6;
+    border-radius: 10px;
+}
+
+    .registro_mascotas label {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+    }
+
+    .registro_mascotas textarea {
+        resize: vertical;
+        max-height: 300px;
+        min-height: 100px;
+    }
+
+    .registro_mascotas input, textarea {
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid rgb(231, 198, 175);
+        border-radius: 20px;
+    }
+
+        .registro_mascotas input:focus, textarea:focus {
+            outline: none;
+        }
+
+        .registro_mascotas input[type="submit"] {
+            color: #fff;
+            border: none;
+            text-decoration: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+            background-size: 200% auto;
+            box-shadow: 0 00 20px rgba(0, 0, 0, .1);
+            width: 140px;
+            height: 60px;
+            display: block;
+            margin: auto;
+        }
+
+            .registro_mascotas input[type="submit"]:hover {
+                background-position: right center;
+                color: #370101;
+            }
+
+.regis_mas h4 {
+    padding: 15px;
+    font-size: 28px;
+    font-style: italic;
+    color: #4e2714;
+    text-shadow: 3px 5px 6px #f7f4f4;
+
 }
