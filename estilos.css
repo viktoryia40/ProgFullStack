@@ -278,15 +278,8 @@ background:linear-gradient(#f7ecec, #f5ed81);
        display: flex;
        flex-direction: column;
     }
-    .mainLogin{ 
-        
-        width: max-content;
-    }
-    .container_form{
-        width: 50%;
-    }
-  
-}
+    
+  }
 
 /*Diseño para tablet*/
 
@@ -305,14 +298,7 @@ background:linear-gradient(#f7ecec, #f5ed81);
     .publicaciones section {
         grid-template-columns: 1fr 1fr;
     }
-    .mainLogin{ 
-
-        width:max-content;
-    }
-    .container_form{
-        width: 50%;
-    }
-
+    
 }
 
 /****Pie de Pagina****/
@@ -384,19 +370,15 @@ background:linear-gradient(#f7ecec, #f5ed81);
 /*main Login*/
 
 :root {
-    --login-bg:#fffcf3; 
+    --login-bg:#f8e5ac; 
     --title-bg: #9089cc;
     --button-bg: #674baf;
-    --light-pink: #e882e8;
-    --image-bg:  #eadbff ;
+    --light-pink: #e66fe6;
+    --image-bg:  #cbaef3 ;
 }
 
 
-body {
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(to top,  #f0e552 0%,  #f0e552 100%);
-}
+
 
 .login-container {
     height: 43.75em;
