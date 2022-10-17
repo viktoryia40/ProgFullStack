@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Registro</title>
 	<link rel="icon" href="./imagenes/Candado.jpg">
@@ -18,16 +18,20 @@
 </head>
 
 <body>
+	<!--Barra de navegación-->
 	<header class="despleg">
 		<nav class="dws_menu">
-			<a href="index.html">
-				<img src="imagenes/logo.png" alt="logo" />
-			</a>
+			<a href="index.html"><img src="imagenes/logo.png" alt="logo" /></a>
+
+			<input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+			<label for="menu" class="toggleMenu"><i class="fa-solid fa-bars"></i>Menu</label>
 			<ul>
 				<li><a href="index.html">Inicio</a></li>
 				<li>
+					<input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
 					<a href="#">Buscador de mascotas</a>
-					<ul>
+					<label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
+			<ul>
 						<li><a href="./perdidos.html">Mascotas perdidas</a></li>
 						<li><a href="encontrados.html">Mascotas encontradas</a></li>
 						<li><a href="registromascotas.html">Registrar una mascota</a></li>
@@ -35,7 +39,9 @@
 				</li>
 				<li><a href="MascotAdopcion.html">Mascotas en adopción</a></li>
 				<li>	
+					<input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
 					<a href="#">Productos</a>
+					<label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
 					<ul>
 						<li><a href="productos.html">ver Productos</a></li>
 						<li><a href="carrito.html">Carrito</a></li>
@@ -44,15 +50,22 @@
 				</li>
 				<li><a href="contacto.html">Contáctanos</a></li>
 				<li>
-					<a href="login.html">Login</a>
+					<input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m3">
+					<a href="#">Log In</a>
+					<label for="sub_m3" class="toggleSubmenu"><i class="fa"></i></label>
 					<ul>
+						<li><a href="login.html">Login</a></li>
 						<li><a href="registro_us.html">Registro</a></li>
 					</ul>
 				</li>
 			</ul>
 		</nav>	
-	</header>
+   </header>
+   <div class="image">
+	<img src="imagenes/heder_for_site_0001.jpg" alt="perro" />
+ </div>
 
+<<<<<<< HEAD
 	<div class="login-container">
 		<div class="login-info-container">
 		  <h1 class="title">Registro</h1>
@@ -76,6 +89,8 @@
 		  <img class="image-container" src="imagenes/encontrado7.jpg" alt="">
 	</div>
 	
+=======
+>>>>>>> 52aba708cf034978c654682eddd7b1cfdc6945a7
      <!---footer----->
 	<footer class="pie-pagina">
         <div class="grupo-1">
