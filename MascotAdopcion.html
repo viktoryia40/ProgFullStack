@@ -24,16 +24,20 @@
 <body>
    
     <!--Navbar-->
-    <header class="despleg">
+     <!--Barra de navegación-->
+     <header class="despleg">
         <nav class="dws_menu">
-            <a href="index.html">
-                <img src="imagenes/logo.png" alt="logo" />
-            </a>
+            <a href="index.html"><img src="imagenes/logo.png" alt="logo" /></a>
+
+            <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+            <label for="menu" class="toggleMenu"><i class="fa-solid fa-bars"></i>Menu</label>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li>
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
                     <a href="#">Buscador de mascotas</a>
-                    <ul>
+                    <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
+            <ul>
                         <li><a href="./perdidos.html">Mascotas perdidas</a></li>
                         <li><a href="encontrados.html">Mascotas encontradas</a></li>
                         <li><a href="registromascotas.html">Registrar una mascota</a></li>
@@ -41,7 +45,9 @@
                 </li>
                 <li><a href="MascotAdopcion.html">Mascotas en adopción</a></li>
                 <li>	
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
                     <a href="#">Productos</a>
+                    <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
                     <ul>
                         <li><a href="productos.html">ver Productos</a></li>
                         <li><a href="carrito.html">Carrito</a></li>
@@ -50,17 +56,20 @@
                 </li>
                 <li><a href="contacto.html">Contáctanos</a></li>
                 <li>
-                    <a href="login.html">Login</a>
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m3">
+                    <a href="#">Log In</a>
+                    <label for="sub_m3" class="toggleSubmenu"><i class="fa"></i></label>
                     <ul>
+                        <li><a href="login.html">Login</a></li>
                         <li><a href="registro_us.html">Registro</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>	
-    </header>
-
-    <h1 class="title"> ADOPTÁ UNA MASCOTA</h1>
-    <div class="container_adopcion">
+   </header>
+   <div class="image">
+    <img src="imagenes/heder_for_site_0001.jpg" alt="perro" />
+ </div>
 
             <div class="animales">
                 <img src="imagenes\img_1.jpeg">

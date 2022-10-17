@@ -16,31 +16,29 @@ body {
 
 .despleg {
     background: linear-gradient(#FFFAFA, #f0e552);
-    margin-top: 0px;
-    width: 100%;
-    text-align:center;
-}
-.dws_menu img {
-    width: 100px;
-    height: 100px;
-    margin: 0;
-    float: left;
 }
 .dws_menu *{
     margin: 0;
     padding: 0;
 }
-.dws_menu ul,
-.dws_menu li{
+.dws_menu img {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+}
+.dws_menu ul{
     list-style: none;
     position:relative;
-    
 }
 .dws_menu > ul{
     display: flex;
     justify-content: center;
 }
-    .dws_menu > ul li a {
+.dws_menu > ul li{
+    position: relative;
+}
+.dws_menu > ul li a {
         display: block;
         padding: 45px 30px;
         font-size: 14px;
@@ -48,11 +46,12 @@ body {
         text-transform: uppercase;
         font-weight: 600;
         color:#370101;
-    }
+        transition: all 0.3s ease;
+}
 .dws_menu li a:hover {
     background: linear-gradient(#FFFAFA, #f0e552);
-    
     color: #833131;
+    transition: all 0.3s ease;
 }
 
 /*submenu*/
@@ -63,18 +62,105 @@ body {
     background-color: #f0e552; /*Le agregué el color de fondo porque sino al desplegar las opciones se confundía con el texto de contenido de la pag*/
     
 }
-    .dws_menu li ul li a {
+    .dws_menu li > ul li a {
         padding: 10px;
         font-size: 14px;
         text-transform: uppercase;
+        
+    }
+.dws_menu li > ul li ul{
+    position: absolute;
+    right: -150px;
+    top: 0;
 }
-.dws_menu li:hover ul {
+
+.dws_menu li:hover > ul {
     display: block;
-    
 }
 .image img {
     width: 100%;
     height: auto;
+}
+
+/* ===== MEDIA ====*/
+.dws_menu [type="checkbox"], 
+.dws_menu label.toggleSubmenu{
+    display: none;
+}
+.dws_menu label.toggleMenu{
+    background-color: #ca6b46;
+    display: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-size: 16px;
+    position: relative;
+}
+.dws_menu label.toggleMenu .fa{
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    font-size: 18px;
+}
+@media all and (max-width:800px) {
+    .dws_menu {
+        overflow: hidden;
+}
+    .dws_menu ul {
+        display:block;
+        max-height: 0;
+        transition: max-height 0.3s;
+    }
+    .dws_menu li > ul li ul{
+        position: absolute;
+        right: auto;
+        top: auto;
+    }
+    .dws_menu label.toggleMenu{
+        display: block;
+    }
+    input.toggleMenu:checked + label.toggleMenu{
+        background: rgb(80, 48, 48);
+        color: #fff;
+    }
+    input.toggleMenu:checked ~ ul, 
+    input.toggleSubmenu:checked ~ ul{
+        display: block;
+        position: relative;
+        max-height: 5000px;
+        transition: max-height 2s ease-in;
+    }
+    .dws_menu label.toggleSubmenu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    input .toggleSubmenu ~ a{
+        background: linear-gradient(#FFFAFA, #f0e552);
+        color: #fff;
+
+    }
+    .dws_menu label.toggleSubmenu .fa::before{
+        content: "\f0d7";
+        color: #380e03;
+    }
+    .dws_menu label.toggleSubmenu .fa{
+        position: absolute;
+        top: 15px;
+        right: 30px;
+    }
+    .dws_menu input.toggleSubmenu:checked ~ label.toggleSubmenu .fa::before{
+        content: "\f0d7";
+        color: #ffffff;
+    }
+    .dws_menu li ul{
+background:linear-gradient(#f7ecec, #f5ed81);
+    }
+    .dws_menu img {
+       display: none;
+    }
 }
 
 
