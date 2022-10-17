@@ -296,92 +296,178 @@ body {
 }
 /*main Login*/
 
-.mainLogin {
-    
-    background-image: url(imagenes/logos.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+:root {
+    --login-bg:#fffcf3; 
+    --title-bg: #9089cc;
+    --button-bg: #674baf;
+    --light-pink: #e882e8;
+    --image-bg:  #eadbff ;
 }
 
-.container{
-   
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to top,  #f0e552 0%,  #f0e552 100%);
+}
+
+.login-container {
+    height: 43.75em;
+    width: 60em;
+    margin: 6em auto;
+    border-radius: 10px;
     display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.login-info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh; 
-    width: 110vh;
-}
-.container_form{
-    
-    background-color: #0a1e35;
-    border-radius: 15px;
-    padding:20px;
-    position: relative;
-    top: 15px;
-    opacity: 0.8;
-}
-
-.container_form img{
-    height: 100px;
-    width: 100px;
-    display:block;
-    margin:auto;
-}
-
-.container_form h2{
     text-align: center;
-    color: white;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
 }
 
-.container_form input{
-    display: block;
-    height: 40px;
-    width: 81%;
-    margin-bottom: 30px;
-    padding: 10px;
-    font-size: 18px;
-    outline: none;
+.image-container {
+    
+    width: 50%;
+    background-color: var(--image-bg);
+    box-sizing: border-box;
+}
+
+.title {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--title-bg);
+}
+
+.social-login {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.social-login-element {
+    width: 12.5rem;
+    height: 3.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    border: 1px solid var(--button-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-login-element img {
+    width: 1.875rem;
+    height: 1.875rem;
+    position: relative;
+    top: 0;
+    left: -0.625rem;
+}
+
+.social-login-element:hover {
+    background-color: #fff;
+}
+
+.login-info-container > p {
+    font-size: 1.25em;
+    margin-top: 1.5em;
+}
+
+.inputs-container {
+    height: 55%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input, .btn {
+    width: 90%;
+    height: 3.125rem;
+    font-size: 1em;
+}
+
+.input {
+    padding-left: 20px;
     border: none;
-    background: transparent;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+.input:hover {
+    border: 2px solid var(--button-bg);
+}
+
+.btn {
+    width: 80%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     color: white;
-    border-bottom: 2px solid white;
-}
-.container_form .check{
-    width: 15px;
-    height: 15px;
-    display: inline;
-}
-.container_form label{
-    color: white;
-}
-.container_form label:hover{
-    color: #b8b8b8b8;
-}
-.container_form a{
-    color: white;
-    text-decoration: none;
-    margin-left: 45px;
-}
-.container_form a:hover{
-    color: #b8b8b8b8;
-}
-.container_form .boton{
-    width: 150px;
-    border-radius: 15px;
-    background-color: green;
-    color: white;
-    margin-top: 30px;
     border: none;
-    border-bottom: 4px solid #0b5a1c;
-    margin-left: 96px;
-    display:block;
-    margin:auto;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    cursor: pointer;
 }
-.container_form .boton:active{
-    background-color: #0b5a1c;
-    width: 145px;
-} 
+
+.inputs-container p {
+    margin: 0;
+}
+
+.span {
+    color: var(--light-pink);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .login-container {
+        width: 70%;
+        margin-top: 3rem;
+    }
+    .login-info-container {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .image-container {
+        display: none;
+    }  
+}
+
+@media screen and (max-width: 650px) {
+    .login-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-container {
+        height: 90%;
+    }
+
+    .social-login {
+        flex-direction: column;
+        align-items: center;
+        height: 30%;
+    }
+
+    .login-info-container > p {
+        margin: 0;
+    }
+}
+
 
 /*Pagina de Contacto*/
 .formulario {
@@ -530,70 +616,4 @@ input, textarea {
     font-weight: 400;
     font-size: 1.2em;
     margin-bottom: 2em;
-}
-/*Registro de mascotas*/
-.photo{
-    background-image: url(https://tse4.mm.bing.net/th?id=OIP.pdcSzwNUfMl7To3cKlwEmwHaFB&pid=Api&P=0);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.registro_mascotas{
-    margin: 0 auto;
-    width: 30%;
-    border: 20px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #e6d8d6;
-    border-radius: 10px;
-}
-.registro_mascotas label{
-    font-size: 14px;
-    display: block;
-    width: 100%;
-}
-.registro_mascotas textarea{
-    resize: vertical;
-    max-height: 300px;
-    min-height: 100px;
-}
-.registro_mascotas input, textarea{
-    margin-bottom: 20px;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid rgb(231, 198, 175);
-    border-radius: 20px;
-}
-
-.registro_mascotas input:focus, textarea:focus{
-    outline: none;
-
-}
-.registro_mascotas input[type="submit"]{
-    color: #fff;
-    border: none;
-    text-decoration: none;
-    border-radius: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
-    background-size: 200% auto;
-    box-shadow: 0 00 20px rgba(0, 0, 0, .1);
-    width: 140px;
-    height: 60px;
-    display:block;
-    margin:auto;
-}
-.registro_mascotas input[type="submit"]:hover{
-    background-position: right center;
-    color: #370101;
-}
-    
-.regis_mas h4{
-    padding: 15px;
-    font-size: 28px;
-    font-style: italic;
-    color: #4e2714;
-    text-shadow: 3px 5px 6px #f7f4f4;
 }
