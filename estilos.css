@@ -192,12 +192,13 @@ body {
        flex-direction: column;
     }
     .mainLogin{ 
-
-        width: 100%;
+        
+        width: max-content;
     }
     .container_form{
-        width: 100%;
+        width: 50%;
     }
+  
 }
 
 /*Diseño para tablet*/
@@ -219,10 +220,10 @@ body {
     }
     .mainLogin{ 
 
-        width: 100%;
+        width:max-content;
     }
     .container_form{
-        width: 100%;
+        width: 50%;
     }
 
 }
@@ -293,7 +294,6 @@ body {
     }
 
 }
-
 /*main Login*/
 
 .mainLogin {
