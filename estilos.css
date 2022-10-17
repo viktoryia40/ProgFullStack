@@ -184,6 +184,7 @@ background:linear-gradient(#f7ecec, #f5ed81);
 
 }
 
+
 .publicaciones p {
     grid-area: descripcion;
     margin-left: 0.3em;
@@ -389,6 +390,7 @@ background:linear-gradient(#f7ecec, #f5ed81);
     --light-pink: #e882e8;
     --image-bg:  #eadbff ;
 }
+
 
 body {
     height: 100vh;
