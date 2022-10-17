@@ -16,6 +16,7 @@ body {
 
 .despleg {
     background: linear-gradient(#FFFAFA, #f0e552);
+   
 }
 .dws_menu *{
     margin: 0;
@@ -24,7 +25,7 @@ body {
 .dws_menu img {
     width: 100px;
     height: 100px;
-    margin: 5px;
+    margin: 0;
     float: left;
 }
 .dws_menu ul{
@@ -37,6 +38,12 @@ body {
 }
 .dws_menu > ul li{
     position: relative;
+}
+.dws_menu > ul li > a i.fa{
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    font-size: 18px;
 }
 .dws_menu > ul li a {
         display: block;
@@ -88,7 +95,7 @@ body {
     display: none;
 }
 .dws_menu label.toggleMenu{
-    background-color: #ca6b46;
+    background-color: linear-gradient(#FFFAFA, #f0e552);;
     display: none;
     padding: 15px 40px;
     text-transform: uppercase;
@@ -101,14 +108,14 @@ body {
     left: 12px;
     font-size: 18px;
 }
-@media all and (max-width:1200px) {
+@media all and (max-width:1000px) {
     .dws_menu {
         overflow: hidden;
 }
     .dws_menu ul {
         display:block;
         max-height: 0;
-        transition: max-height 0.3s;
+        transition: 0.3s;
     }
     .dws_menu li > ul li ul{
         position: absolute;
@@ -127,7 +134,7 @@ body {
         display: block;
         position: relative;
         max-height: 5000px;
-        transition: max-height 2s ease-in;
+        transition: 2s ease-in;
     }
     .dws_menu label.toggleSubmenu{
         position: absolute;
@@ -135,11 +142,12 @@ body {
         right: 0;
         width: 100%;
         height: 100%;
+        cursor: pointer;
         display: block;
     }
-    input .toggleSubmenu ~ a{
+    input.toggleSubmenu:checked ~ a{
         background: linear-gradient(#FFFAFA, #f0e552);
-        color: #fff;
+        color: rgb(121, 22, 22);
 
     }
     .dws_menu label.toggleSubmenu .fa::before{
@@ -376,10 +384,6 @@ background:linear-gradient(#f7ecec, #f5ed81);
     --light-pink: #e66fe6;
     --image-bg:  #cbaef3 ;
 }
-
-
-
-
 .login-container {
     height: 43.75em;
     width: 60em;
@@ -594,8 +598,6 @@ input, textarea {
     background-color: #b1af49;
     padding: 20px;
     
-    
-
 }
 .btn{
     width: 100%;
@@ -693,10 +695,10 @@ input, textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+   background-attachment: fixed;
 }
 
 .registro_mascotas {
-    margin: 0 auto;
     width: 30%;
     border: 20px;
     margin: 20px;
@@ -759,3 +761,13 @@ input, textarea {
     text-shadow: 3px 5px 6px #f7f4f4;
 
 }
+@media screen and (max-width:1000px){
+    
+    .registro_mascotas {
+        width: 50%;
+    }
+    .photo {
+      width: 100%;
+    }
+}
+    
