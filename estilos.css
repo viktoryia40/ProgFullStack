@@ -191,6 +191,14 @@ body {
        display: flex;
        flex-direction: column;
     }
+    .mainLogin{ 
+        
+        width: max-content;
+    }
+    .container_form{
+        width: 50%;
+    }
+  
 }
 
 /*Diseño para tablet*/
@@ -209,6 +217,13 @@ body {
 
     .publicaciones section {
         grid-template-columns: 1fr 1fr;
+    }
+    .mainLogin{ 
+
+        width:max-content;
+    }
+    .container_form{
+        width: 50%;
     }
 
 }
@@ -279,7 +294,6 @@ body {
     }
 
 }
-
 /*main Login*/
 
 .mainLogin {
@@ -367,8 +381,7 @@ body {
 .container_form .boton:active{
     background-color: #0b5a1c;
     width: 145px;
-}
-
+} 
 
 /*Pagina de Contacto*/
 .formulario {
