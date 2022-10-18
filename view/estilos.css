@@ -1,0 +1,781 @@
+﻿/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+/*Estilos generales*/
+
+body {
+    font-family: 'Inter';
+}
+
+/*Barra de navegación*/
+
+.despleg {
+    background: linear-gradient(#FFFAFA, #f0e552);
+   
+}
+.dws_menu *{
+    margin: 0;
+    padding: 0;
+}
+.dws_menu img {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    float: left;
+}
+.dws_menu ul{
+    list-style: none;
+    position:relative;
+}
+.dws_menu > ul{
+    display: flex;
+    justify-content: center;
+}
+.dws_menu > ul li{
+    position: relative;
+}
+.dws_menu > ul li > a i.fa{
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    font-size: 18px;
+}
+.dws_menu > ul li a {
+        display: block;
+        padding: 45px 30px;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        color:#370101;
+        transition: all 0.3s ease;
+}
+.dws_menu li a:hover {
+    background: linear-gradient(#FFFAFA, #f0e552);
+    color: #833131;
+    transition: all 0.3s ease;
+}
+
+/*submenu*/
+.dws_menu li ul {
+    position: absolute;
+    margin: 0px;
+    display: none;
+    background-color: #f0e552; /*Le agregué el color de fondo porque sino al desplegar las opciones se confundía con el texto de contenido de la pag*/
+    
+}
+    .dws_menu li > ul li a {
+        padding: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        
+    }
+.dws_menu li > ul li ul{
+    position: absolute;
+    right: -150px;
+    top: 0;
+}
+
+.dws_menu li:hover > ul {
+    display: block;
+}
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== MEDIA ====*/
+.dws_menu [type="checkbox"], 
+.dws_menu label.toggleSubmenu{
+    display: none;
+}
+.dws_menu label.toggleMenu{
+    background-color: linear-gradient(#FFFAFA, #f0e552);;
+    display: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-size: 16px;
+    position: relative;
+}
+.dws_menu label.toggleMenu .fa{
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    font-size: 18px;
+}
+@media all and (max-width:1000px) {
+    .dws_menu {
+        overflow: hidden;
+}
+    .dws_menu ul {
+        display:block;
+        max-height: 0;
+        transition: 0.3s;
+    }
+    .dws_menu li > ul li ul{
+        position: absolute;
+        right: auto;
+        top: auto;
+    }
+    .dws_menu label.toggleMenu{
+        display: block;
+    }
+    input.toggleMenu:checked + label.toggleMenu{
+        background: rgb(80, 48, 48);
+        color: #fff;
+    }
+    input.toggleMenu:checked ~ ul, 
+    input.toggleSubmenu:checked ~ ul{
+        display: block;
+        position: relative;
+        max-height: 5000px;
+        transition: 2s ease-in;
+    }
+    .dws_menu label.toggleSubmenu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        display: block;
+    }
+    input.toggleSubmenu:checked ~ a{
+        background: linear-gradient(#FFFAFA, #f0e552);
+        color: rgb(121, 22, 22);
+
+    }
+    .dws_menu label.toggleSubmenu .fa::before{
+        content: "\f0d7";
+        color: #380e03;
+    }
+    .dws_menu label.toggleSubmenu .fa{
+        position: absolute;
+        top: 15px;
+        right: 30px;
+    }
+    .dws_menu input.toggleSubmenu:checked ~ label.toggleSubmenu .fa::before{
+        content: "\f0d7";
+        color: #ffffff;
+    }
+    .dws_menu li ul{
+background:linear-gradient(#f7ecec, #f5ed81);
+    }
+    .dws_menu img {
+       display: none;
+    }
+}
+
+
+/*main Mascotas perdidas-encontradas*/
+
+.publicaciones {
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "descripcion descripcion"
+    "enlace enlace"
+    "filtros posts";
+    column-gap: 1em;
+    margin-bottom: 1.5em;
+}
+
+.publicaciones h1 {
+    grid-area: titulo;
+    justify-self: center;
+    margin-top: 0.3em;
+
+}
+
+
+.publicaciones p {
+    grid-area: descripcion;
+    margin-left: 0.3em;
+    justify-self: center;
+    font-weight: 500;
+}
+
+#enlaceForm {
+    grid-area: enlace;
+    border: 0.1em solid #370101;
+    background-color: #e5e9dc;
+    padding: 0.5em;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+#enlaceForm a {
+    color: #829c42;
+}
+
+.filtros {
+    grid-area: filtros;
+    background-color: #ece697;
+    padding: 1em;
+    width: auto;
+    font-weight: 400;
+    color: #370101;
+}
+
+.ulPrincipal {
+    padding-left: 0.5em;
+}
+
+.ulPrincipal li {
+    list-style: none;
+    padding-top: 0.3em;
+    font-size: 1em;
+    padding-left: 0em;
+}
+
+.ulSecundaria {
+    padding-left: 1.3em;
+    padding-right: 0.3em;
+}
+
+.ulSecundaria li{
+    list-style: none;
+    padding: 0.2em;
+    font-size: 0.9em;
+}
+
+.publicaciones section {
+    grid-area: posts;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    margin-right: 1.5em;
+}
+
+.publicaciones .card {
+    justify-self: center;
+    text-align: center;
+    width: 100%;
+}
+
+.publicaciones .btn-primary {
+    background-color: rgb(248, 219, 88);
+    border-color: #000000;
+}
+
+.publicaciones .btn-primary:active,
+.btn-primary:hover {
+    background-color: #d9cb83;
+    border-color: #000000;
+}
+/*Diseño para móvil*/
+
+@media screen and (max-width:575px) {
+
+    /*main perdidos-encontrados*/
+
+    .publicaciones {
+        grid-template-columns: 30% auto;
+        gap: 0.3em;
+    }
+    .publicaciones p, #enlaceForm {
+        text-align: center;
+    }
+
+    .publicaciones section {
+       display: flex;
+       flex-direction: column;
+    }
+    
+  }
+
+/*Diseño para tablet*/
+
+@media screen and (min-width:576px) and (max-width:767px) {
+
+    /*main perdidos-encontrados*/
+
+    .publicaciones {
+        grid-template-columns: 20% auto;
+        gap: 0.6em;
+    }
+    .publicaciones p, #enlaceForm {
+        text-align: center;
+    }
+
+    .publicaciones section {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+/****Pie de Pagina****/
+.pie-pagina{
+    width: 100%;
+    background: linear-gradient(#FFFAFA, #f0e552);
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 200px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #370101;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #370101;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: rgba(244, 244, 12, 0.708);
+}
+.pie-pagina .grupo-2{
+    background-color: #0d2033;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 80%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+
+}
+/*main Login*/
+
+:root {
+    --login-bg:#f8e5ac; 
+    --title-bg: #9089cc;
+    --button-bg: #674baf;
+    --light-pink: #e66fe6;
+    --image-bg:  #cbaef3 ;
+}
+.login-container {
+    height: 43.75em;
+    width: 60em;
+    margin: 6em auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.login-info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+}
+
+.image-container {
+    
+    width: 50%;
+    background-color: var(--image-bg);
+    box-sizing: border-box;
+}
+
+.title {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--title-bg);
+}
+
+.social-login {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.social-login-element {
+    width: 12.5rem;
+    height: 3.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    border: 1px solid var(--button-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-login-element img {
+    width: 1.875rem;
+    height: 1.875rem;
+    position: relative;
+    top: 0;
+    left: -0.625rem;
+}
+
+.social-login-element:hover {
+    background-color: #fff;
+}
+
+.login-info-container > p {
+    font-size: 1.25em;
+    margin-top: 1.5em;
+}
+
+.inputs-container {
+    height: 55%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input, .btn {
+    width: 90%;
+    height: 3.125rem;
+    font-size: 1em;
+}
+
+.input {
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+.input:hover {
+    border: 2px solid var(--button-bg);
+}
+
+.btn {
+    width: 80%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    cursor: pointer;
+}
+
+.inputs-container p {
+    margin: 0;
+}
+
+.span {
+    color: var(--light-pink);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .login-container {
+        width: 70%;
+        margin-top: 3rem;
+    }
+    .login-info-container {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .image-container {
+        display: none;
+    }  
+}
+
+@media screen and (max-width: 650px) {
+    .login-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-container {
+        height: 90%;
+    }
+
+    .social-login {
+        flex-direction: column;
+        align-items: center;
+        height: 30%;
+    }
+
+    .login-info-container > p {
+        margin: 0;
+    }
+}
+
+
+/*Pagina de Contacto*/
+.formulario {
+    width: 40rem;
+    margin: auto;
+    background-color: #e5e9dc;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+}
+.contacto, .subtitulo {
+    color:#833131;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+input, textarea {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    border-color: #cdc76b;
+    border-radius: 0.5rem;
+}
+.btn {
+    display:block;
+    width: 10rem;
+    text-transform: uppercase;
+    color:#000000;
+    font-weight: 900;
+    padding: 1rem;
+    margin:auto;
+    text-align: center;
+    background-color:#f0e552;
+    transition: background-color 0.3s;
+    cursor:pointer;
+}
+.btn:hover {
+    background-color: #d9cb83;
+}
+@media(max-width:480px) {
+    .formulario {
+        width: 100%;
+    }
+}
+
+/*Finalizar la Compra*/
+
+.finalizar{
+    font-size: 20px;
+    margin: 10px auto;
+    width: 300px;
+    background-color: #b1af49;
+    padding: 20px;
+    
+}
+.btn{
+    width: 100%;
+    background-color: #1668c4;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+/*-----MascotAdopcion----*/
+
+.title{
+    /* text-align: center;
+    font-size: 60px;
+    color: #0f0b06;
+    margin-top: 100px;
+    font-weight: 500; */
+    text-align: center;
+    grid-area: enlace;
+    border: 0.1em solid #370101;
+    background-color: #e5e9dc;
+    padding: 0.5em;
+    border-radius: 10px;
+    font-weight: 600;
+    margin:20px;
+}
+
+.container_adopcion{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.animales{
+    width: 330px;
+    height: 500px;
+   border-radius: 8px;
+   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+   overflow: hidden;
+   margin: 20px;
+   text-align: center;
+   transition: all 0.25s;
+}
+
+.animales:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+.animales img{
+    width: 330px;
+    height: 220px;
+}
+
+.animales h2{
+   font-weight: 600;
+}
+
+.animales p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+ }
+
+/*productos*/
+
+.publicaciones_productos h1 {
+    grid-area: titulo;
+    justify-self: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    font-size: 2em;
+    background-image: linear-gradient(120deg, #F09819,#EDDE5D 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 100%;
+}
+.publicaciones_productos p {
+    grid-area: descripcion;
+    justify-self: center;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+/*Registro de mascotas*/
+.photo {
+    background-image: url(https://st2.depositphotos.com/1054904/7850/i/450/depositphotos_78508482-stock-photo-black-cat.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.registro_mascotas {
+    width: 400px;
+    height: auto;
+    border: 20px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #e6d8d6;
+    border-radius: 10px;
+}
+
+    .registro_mascotas label {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        
+    }
+
+    .registro_mascotas textarea {
+        resize: vertical;
+        max-height: 300px;
+        min-height: 100px;
+    }
+
+    .registro_mascotas input, textarea {
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid rgb(231, 198, 175);
+        border-radius: 20px;
+    }
+
+        .registro_mascotas input:focus, textarea:focus {
+            outline: none;
+        }
+
+        .registro_mascotas input[type="submit"] {
+            color: #fff;
+            border: none;
+            text-decoration: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+            background-size: 200% auto;
+            box-shadow: 0 00 20px rgba(0, 0, 0, .1);
+            width: 140px;
+            height: 60px;
+            display: block;
+            margin: auto;
+        }
+
+            .registro_mascotas input[type="submit"]:hover {
+                background-position: right center;
+                color: #370101;
+            }
+
+.regis_mas h4 {
+    padding: 15px;
+    font-size: 28px;
+    font-style: italic;
+    color: #4e2714;
+    text-shadow: 3px 5px 6px #521919;
+
+}
+
+@media screen and (max-width:1000px){
+    
+    .registro_mascotas {
+        width: 50%;
+    }
+    .photo {
+      width: 100%;
+    }
+    .regis_mas h4{
+        font-size: 20px;
+        
+    }
+}
+    
