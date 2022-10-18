@@ -87,6 +87,7 @@ body {
 .image img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 /* ===== MEDIA ====*/
@@ -691,15 +692,16 @@ input, textarea {
 }
 /*Registro de mascotas*/
 .photo {
-    background-image: url(https://tse4.mm.bing.net/th?id=OIP.pdcSzwNUfMl7To3cKlwEmwHaFB&pid=Api&P=0);
+    background-image: url(https://st2.depositphotos.com/1054904/7850/i/450/depositphotos_78508482-stock-photo-black-cat.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-   background-attachment: fixed;
+   
 }
 
 .registro_mascotas {
-    width: 30%;
+    width: 400px;
+    height: auto;
     border: 20px;
     margin: 20px;
     padding: 20px;
@@ -711,6 +713,7 @@ input, textarea {
         font-size: 14px;
         display: block;
         width: 100%;
+        
     }
 
     .registro_mascotas textarea {
@@ -758,9 +761,10 @@ input, textarea {
     font-size: 28px;
     font-style: italic;
     color: #4e2714;
-    text-shadow: 3px 5px 6px #f7f4f4;
+    text-shadow: 3px 5px 6px #521919;
 
 }
+
 @media screen and (max-width:1000px){
     
     .registro_mascotas {
@@ -768,6 +772,10 @@ input, textarea {
     }
     .photo {
       width: 100%;
+    }
+    .regis_mas h4{
+        font-size: 20px;
+        
     }
 }
     
