@@ -721,6 +721,7 @@ input, textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
    
 }
 
@@ -790,17 +791,11 @@ input, textarea {
 
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:800px){
     
     .registro_mascotas {
         width: 50%;
-    }
-    .photo {
-      width: 100%;
-    }
-    .regis_mas h4{
-        font-size: 20px;
-        
+        margin: 5px;
     }
 }
     
