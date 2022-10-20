@@ -592,12 +592,24 @@ input, textarea {
 
 /*Finalizar la Compra*/
 
+.fin_de_compra{
+    background-image: url(https://99px.ru/sstorage/53/2011/06/mid_16243_7570.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
 .finalizar{
-    font-size: 20px;
-    margin: 10px auto;
-    width: 300px;
+    font-size: 18px;
     background-color: #b1af49;
     padding: 20px;
+    width: 370px;
+    margin:70px;
+    border-radius: 15px;
+}
+
+.finalizar input{
+    margin-bottom:5px;
     
 }
 .btn{
@@ -609,6 +621,19 @@ input, textarea {
     margin: 16px 0;
     font-size: 16px;
 }
+@media screen and (max-width:800px){
+    
+    .fin_de_compra {
+        background-size:contain;
+    }
+    .finalizar{
+        width: 55%;
+        margin: 5px;
+
+    }
+    
+}
+
 
 /*-----MascotAdopcion----*/
 
