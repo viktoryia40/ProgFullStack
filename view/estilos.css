@@ -16,6 +16,7 @@ body {
 
 .despleg {
     background: linear-gradient(#FFFAFA, #f0e552);
+    height: auto;
    
 }
 .dws_menu *{
@@ -584,10 +585,12 @@ input, textarea {
 .btn:hover {
     background-color: #d9cb83;
 }
-@media(max-width:480px) {
+@media screen and (max-width:1000px){
+    
     .formulario {
-        width: 100%;
+        width: 70%;
     }
+    
 }
 
 /*Finalizar la Compra*/
@@ -633,7 +636,6 @@ input, textarea {
     }
     
 }
-
 
 /*-----MascotAdopcion----*/
 
