@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./estilos.css">
      <!---link favicon-->
      <link rel="icon" type="icon/png" href="../imagenes/mascotar.favi.png">
-    <title>Finalizacion de compra</title>
+    <title>Finalización de compra</title>
 </head>
 <body>
      <!--Barra de navegación-->
@@ -68,37 +68,39 @@
 
         <fieldset class="finalizar">
          <legend>Elije opción de envío y pago</legend>
-         <label>Metodo de envío:</label>
-         <select name="Metodo de envío">
-             <option value="Retiro en tienda">Retiro en tienda</option>
-             <option value="Envío a domicilio">Envío a domicilio</option>
+         <label>Método de envío:</label>
+         <select name="Metodo de envío" id="envio">
+            <option value="">Seleccionar...</option> 
+            <option value="Retiro en tienda">Retiro en tienda</option>
+            <option value="Envío a domicilio">Envío a domicilio</option>
          </select>
          
      <p>
      <label>Dirección</label>
-         <input type="tel" name="Dirección" size="26px">
+         <input type="tel" name="Dirección" id="direccion" size="26px">
      </p>
      <p>
-         <label>Codigo postal</label>
-             <input type="tel" name="Código Postal" size="26px">
+         <label>Código postal</label>
+             <input type="tel" name="Código Postal" id="codigopostal" size="26px">
          </p>
      <p>
      
              <label>Localidad</label>
-             <input type="tel" name="Localidad" size="26px">
+             <input type="tel" name="Localidad" id="localidad" size="26px">
          </p>
          <p>
              <label>Provincia</label>
-             <input type="tel" name="Provincia" size="26px">
+             <input type="tel" name="Provincia" id="provincia" size="26px">
          </p>
          <label>Forma de Pago:</label>
-         <select name="Forma de Pago">
-             <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+         <select name="Forma de Pago" id="pago">
+            <option value="">Seleccionar...</option> 
+            <option value="Transferencia Bancaria">Transferencia Bancaria</option>
              <option value="MercadoPago">MercadoPago</option>
          </select>
  
      <p>
-         <input class="btn" type="submit" value="Enviar" >
+        <input type="button" onclick="validacion()"; value="Enviar"/>
      </p>    
      </fieldset>
         </div>
@@ -133,5 +135,6 @@
         <small>&copy; 2022 <b>MascotAR</b> - Todos los Derechos Reservados - Desarrollado por <b>Optimos WEB</b></small>
     </div>
 </footer>
+<script src="javascript.js"></script>
 </body>
 </html>

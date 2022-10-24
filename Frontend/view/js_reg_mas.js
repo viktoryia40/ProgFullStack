@@ -1,0 +1,28 @@
+function validar(){
+    let nombre=document.getElementById("nombre").value;
+    if(nombre.length==0 || /^\s+$/.test(nombre)){
+        alert("Complete Nombre y Apellido por favor");
+    }
+    let email=document.getElementById("email").value;
+    if(email.length==0 || /^\s+$/.test(email)){
+        alert("Complete el email por favor");
+    }
+    let registro=document.getElementById("registro").value;
+    if (registro.length==""){
+        alert("Elija una opción por favor")
+    }
+    let especie=document.getElementById("especie").value;
+    let raza=document.getElementById("raza").value;
+    let zona=document.getElementById("zona").value;
+    let foto=document.getElementById("foto").value;
+    let descripcion=document.getElementById("descripcion").value;
+    console.log(nombre);
+    console.log(email);
+    console.log(registro);
+    console.log(especie);
+    console.log(raza);
+    console.log(zona);
+    console.log(foto);
+    console.log(descripcion);
+}
+    

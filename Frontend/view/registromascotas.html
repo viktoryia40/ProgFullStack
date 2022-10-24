@@ -71,18 +71,28 @@
         <h4>Formulario de Registro de Mascotas</h4>
         <form class="registro_mascotas">
             <label for="nombre">Nombre y Apellido:</label>
-            <input type="text" id="nombre" placeholder="Escribe tu nombre y apellido">
+            <input type="text" id="nombre" autofocus>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="Escribe tu email">
-            <label for="nombre">Especie:</label>
+            <input type="email" id="email">
+            <label for="registro">Elija una opción:</label><br>
+        <select id="registro" name="registro" required>
+            <option value="">Seleccionar...</option>
+            <option value="Perdí a mi mascota">Perdí a mi mascota</option>
+            <option value="Encontré una mascota">Encontré una mascota</option>
+            <option value="Quiero adoptar una mascota">Quiero adoptar una mascota</option>
+        </select><br>
+        
+            <label for="especie">Especie:</label>
             <input type="text" id="especie">
-            <label for="nombre">Raza:</label>
-            <input type="text" id=raza>
-            <label for="nombre">Zona:</label>
+            <label for="raza">Raza:</label>
+            <input type="text" id="raza">
+            <label for="zona">Zona:</label>
             <input type="text" id="zona">
+            <label>Subir foto de la mascota:</label><br>
+            <input type="file" id="foto"><br>
             <label for="descripcion">Descripción de la mascota:</label>
             <textarea id="descripcion"></textarea>
-            <input type="submit" value="Enviar">
+            <input type="button" onclick="validar()"; value="ENVIAR"/>
         </form>
     </section>
     </main>
@@ -119,6 +129,6 @@
 
 
 
-
+<script src="js_reg_mas.js"></script>
 </body>
 </html>
