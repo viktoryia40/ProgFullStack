@@ -11,7 +11,9 @@
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
       <!--Fuente fontawesome-->
       <script src="https://kit.fontawesome.com/98b3766597.js" crossorigin="anonymous"></script>
-    <!-- CSS only -->
+      <i class="fa-solid fa-circle-xmark"></i>
+      <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+      <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./estilos.css">
      <!---link favicon-->
@@ -19,6 +21,10 @@
     <title>Contacto</title>
 </head>
 <body>
+
+
+
+
     <!--Barra de navegación-->
     <header class="despleg">
         <nav class="dws_menu">
@@ -61,19 +67,67 @@
                 </li>
             </ul>
         </nav>	
+
    </header>
-   
- <form class="formulario" action="">
-    <h2 class="contacto">Contacto</h2>
+
+ <main>
+    <form action="" class="formulario" id="formulario">
+        <h2 class="contacto">Contacto</h2>
     <p class="subtitulo">Escribenos y la brevedad nos pondremos en contacto con vos</p>
-    <input type="text" name="Nombre" placeholder="Nombre">
-    <input type="text" name="Apellido" placeholder="Apellido">
-    <input type="tel" name="phone" placeholder="Tu telefono">
-    <input type="email" name="email" placeholder="Tu E-mail">
-    <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Escriba aqui su mensaje..."></textarea>
-    <input class="btn" type="submit" value="Enviar" >
- </form>
- 
+        <!-- Grupo: Nombre -->
+        <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">Nombre</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="nombre" id="nombre">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El nombre tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+        </div>
+
+        <!-- Grupo: Apellido-->
+        <div class="formulario__grupo" id="grupo__apellido">
+            <label for="apellido" class="formulario__label">Apellido</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="apellido" id="apellido" >
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El apellido tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+        </div>
+
+        <!-- Grupo: Teléfono -->
+        <div class="formulario__grupo" id="grupo__telefono">
+            <label for="telefono" class="formulario__label">Teléfono</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+        </div>
+
+        <!-- Grupo: Correo Electronico -->
+        <div class="formulario__grupo" id="grupo__correo">
+            <label for="correo" class="formulario__label">Correo Electrónico</label>
+            <div class="formulario__grupo-input">
+                <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+        </div>
+
+    
+        <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas_fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+        </div>
+
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+        </div>
+    </form>
+</main>
+<script src="js/validar_contacto.js"></script>
+
+
  <!---Pie de Pagina---->
  <footer class="pie-pagina">
     <div class="grupo-1">
