@@ -558,6 +558,13 @@ background:linear-gradient(#f7ecec, #f5ed81);
     font-weight: 600;
     cursor: pointer;
 }
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #B06AB3;
+    padding-top: 20px; 
+}
 
 @media screen and (max-width: 1000px) {
     .login-container {

@@ -76,11 +76,17 @@
 				  <span>Facebook</span>
 			  </div>
 		  </div>
-		  <p>or</p>
-		  <form class="inputs-container">
-			  <input class="input" type="text" placeholder="Usuario">
-			  <input class="input" type="text" placeholder="Contraseña">
-			  <button class="btn">Registrarse</button>
+		  <p>o</p>
+
+		  <form action="" method="post" class="inputs-container" id="form">
+
+			  <input class="input" type="text" placeholder="Nombre" id="nombre" >
+              <input class="input" type="email" placeholder="Correo" id="email">
+			  <input class="input" type="password" placeholder="Contraseña" id="password">
+
+			  <button type="submit" class="btn">Registrarse</button>
+              <p class="warnings" id="warnings"></p>
+
 		  </form>
 		</div>
 		  <img class="image-container" src="../imagenes/encontrado7.jpg" alt="">
@@ -119,5 +125,6 @@
     
 
 </footer>
+<script src="registro_usuario.js"></script>
 </body>
 </html>
