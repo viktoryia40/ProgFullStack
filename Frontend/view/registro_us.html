@@ -78,11 +78,11 @@
 		  </div>
 		  <p>o</p>
 
-		  <form action="" method="post" class="inputs-container" id="form">
+		  <form action="" method="post" class="inputs-container" id="form" onsubmit="return validar();">
 
-			  <input class="input" type="text" placeholder="Nombre" id="nombre" >
-              <input class="input" type="email" placeholder="Correo" id="email">
-			  <input class="input" type="password" placeholder="Contraseña" id="password">
+			  <input class="input" type="text" placeholder="Nombre" id="nombre" required >
+              <input class="input" type="email" placeholder="Correo" id="email" required >
+			  <input class="input" type="password" placeholder="Contraseña" id="password" required>
 
 			  <button type="submit" class="btn">Registrarse</button>
               <p class="warnings" id="warnings"></p>
@@ -92,6 +92,7 @@
 		  <img class="image-container" src="../imagenes/encontrado7.jpg" alt="">
 	</div>
 	
+   
      <!---footer----->
 	<footer class="pie-pagina">
         <div class="grupo-1">
@@ -125,6 +126,6 @@
     
 
 </footer>
-<script src="registro_usuario.js"></script>
+<script src="js/validacion_registro_usuario.js"></script>
 </body>
 </html>
