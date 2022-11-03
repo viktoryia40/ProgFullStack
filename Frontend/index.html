@@ -30,16 +30,15 @@
             <label for="menu" class="toggleMenu"><i class="fa-regular fa-bars"></i>Menu</label>
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
-                <li>
                     <input type="checkbox" name="toggle" id="sub_m1" class="toggleSubmenu" >
-                    <a href="#">Buscador de mascotas</a>
-            <ul>
+                    <li><a href="#">Buscador de mascotas</a>
+                     <ul>
                     <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
                         <li><a href="./view/perdidos.html">Mascotas perdidas</a></li>
                         <li><a href="./view/encontrados.html">Mascotas encontradas</a></li>
                         <li><a href="./view/registromascotas.html">Registrar una mascota</a></li>
-            </ul>
-                </li>
+                     </ul>
+                    </li>
                 <li><a href="./view/MascotAdopcion.html">Mascotas en adopción</a></li>
                 <li>	
                     <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
@@ -64,27 +63,44 @@
             </ul>
         </nav>	
    </header>
-   <div class="container.slider">
-     <div class="slider" id="slider">
-       <div class="slider__section">
-         <img src="./imagenes/heder_for_site_0001.jpg" alt="" class="slider__img">
-       </div>
-       <div class="slider__section">
-          <img src="./imagenes/sliderimg002.jpg" alt="" class="slider__img">
-        </div>
-        <div class="slider__section">
-           <img src="./imagenes/SliderIMG004.jpg" alt="" class="slider__img">
-        </div>
-        <div class="slider__section">
-           <img src="./imagenes/SliderIMG003.jpg" alt="" class="slider__img">
-       </div>
-       <div class="slider__section">
-        <img src="./imagenes/imgslider002.jpg" alt="" class="slider__img">
-    </div>
+   
      </div>
-     <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
-     <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
-   </div>
+     <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+             <img src="./imagenes/heder_for_site_0001.jpg" style="width: 100%">
+         </div>
+           <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+              <img src="./imagenes/sliderimg002.jpg" style="width: 100%">
+            </div>
+            <div class="mySlides fade">
+               <img src="./imagenes/animals-3017138_1280.jpg" style="width: 100%">
+               <div class="numbertext">3 / 5</div>
+            </div>
+            <div class="mySlides fade">
+               <img src="./imagenes/animals-3751485_1280.jpg" style="width: 100%">
+               <div class="numbertext">4 / 5</div>
+           </div>
+           <div class="mySlides fade">
+            <img src="./imagenes/imgslider002.jpg" style="width: 100%">
+            <div class="numbertext">5 / 5</div>
+        </div>
+         
+         <!--buttons-->
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+         <!--circles-->
+         <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
         <!---Pie de Pagina---->
     <footer class="pie-pagina">
         <div class="grupo-1">
