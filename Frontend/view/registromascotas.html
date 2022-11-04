@@ -69,7 +69,7 @@
         
     <section class="regis_mas">
         <h4>Formulario de Registro de Mascotas</h4>
-        <form class="registro_mascotas">
+        <form class="registro_mascotas" onsubmit="return validar();" method="post">
             <label for="nombre">Nombre y Apellido:</label>
             <input type="text" id="nombre" autofocus>
             <label for="email">Email:</label>
@@ -92,10 +92,11 @@
             <input type="file" id="foto"><br>
             <label for="descripcion">Descripción de la mascota:</label>
             <textarea id="descripcion"></textarea>
-            <input type="button" onclick="validar()"; value="ENVIAR"/>
+            <input type="submit" value="ENVIAR"/>
         </form>
     </section>
     </main>
+
 	<footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
