@@ -1,17 +1,17 @@
 function validar(){
     let nombre=document.getElementById("nombre").value;
     if(nombre.length==0 || /^\s+$/.test(nombre)){
-        alert("Complete Nombre y Apellido por favor");
+        alert("Complete su Nombre y Apellido, por favor");
         return false;
     }
     let email=document.getElementById("email").value;
     if(email.length==0 || /^\s+$/.test(email)){
-        alert("Complete el email por favor");
+        alert("Complete el email, por favor");
         return false;
     }
     let registro=document.getElementById("registro").value;
     if (registro.length==""){
-        alert("Elija una opción por favor")
+        alert("Elija una opción, por favor")
         return false;
     }
     let especie=document.getElementById("especie").value;
