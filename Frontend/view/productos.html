@@ -61,29 +61,35 @@
             </ul>
         </nav>	
    </header>
-   
-
 
     <main class="publicaciones publicaciones_productos">
         <h1>Venta de productos</h1>
         <p>En esta página encontrarás productos para el cuidado y la alimentación de tus peluditos.</p>
-        <aside class="filtros">
-            <ul class="ulPrincipal">
-                <li>Comida</li>
-                    <ul class="ulSecundaria">
-                        <li>Perro</li>
-                        <li>Gato</li>
-                    </ul>
-                </li>
-                <li>Accesorios
-                    <ul class="ulSecundaria">
-                        <li>Macho</li>
-                        <li>Hembra</li>
-                    </ul>
-                </li>
-                <li class="ulPrincipal">Juguetes</li>
-            </ul>
-        </aside>               
+        <hr>
+        <h3>Filtros</h3>  
+        <form id="filtros" method="POST"> 
+            <select class="form-select especie" name="Especie" aria-label="Default select example">
+                <option selected>Especie</option>
+                <option value="1">Perro</option>
+                <option value="2">Gato</option>
+                <option value="3">Otro</option>
+            </select>
+            <select class="form-select" name="Categoría" aria-label="Default select example">
+                <option selected>Categoría</option>
+                <option value="1">Alimentos</option>
+                <option value="2">Accesorios</option>
+                <option value="3">Juguetes</option>
+                <option value="4">Otra</option>
+            </select>
+            <select class="form-select" name="Sexo" aria-label="Default select example">
+                <option selected>Sexo</option>
+                <option value="1">Macho</option>
+                <option value="2">Hembra</option>
+                <option value="3">Unisex</option>
+            </select>
+            <button type="submit" id="btnBuscador" class="btn btn-primary"><img src="../imagenes/lupa.png" alt="lupa">  Buscar</button>
+        </form>
+        <hr>
         <section>
             <div class="card">
                 <img src="../imagenes/pedigreeAdulto.jpg" class="card-img-top" alt="...">

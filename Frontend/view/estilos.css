@@ -337,11 +337,11 @@ button img {
     justify-self: center;
     align-self: center;
     width: 65%;
-    background-color: rgb(212, 194, 103);
+    background-color: rgb(218, 204, 134);
 }
 
 #btnFiltroEspecializado:hover, #btnFiltroRapido:hover {
-    background-color: rgb(167, 155, 95);
+    background-color: rgb(201, 194, 159);
 }
 
 .publicaciones section {
@@ -762,19 +762,17 @@ input, textarea {
 /*productos*/
 
 .publicaciones_productos h1 {
-    grid-area: titulo;
     justify-self: center;
     margin-top: 2em;
     margin-bottom: 1em;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 3em;
     background-image: linear-gradient(120deg, #F09819,#EDDE5D 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
     background-position: 0 100%;
 }
 .publicaciones_productos p {
-    grid-area: descripcion;
     justify-self: center;
     font-weight: 400;
     font-size: 1.2em;
