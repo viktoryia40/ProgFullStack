@@ -347,14 +347,15 @@ button img {
 .publicaciones section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
-    margin: 1em;
+    gap: 2em;
+    margin: 2em;
 }
 
 .publicaciones .card {
     justify-self: center;
     text-align: center;
     width: 100%;
+    max-width: 30em;
 }
 
 .publicaciones .btn-primary {
