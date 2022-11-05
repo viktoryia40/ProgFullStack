@@ -1,16 +1,25 @@
 function validar(){
    var nombre, correo, contraseña;
    nombre = document.getElementById("nombre").value;
+   telefono = document.getElementById("telefono").value;
    correo = document.getElementById("email").value;
    contraseña = document.getElementById("password").value;
    expresion = /\w+@\w+\.+[a-z]/;
    
-   if(nombre === "" || correo === "" || contraseña === ""){
+   if(nombre === "" || telefono === "" || correo === "" || contraseña === ""){
       alert("Hay campos vacios");
       return false;
    }
    else if(nombre.length >25){
       alert("Nombre muy largo")
+      return false;
+   }
+   else if(telefono.length >10){
+      alert("El telefono es muy largo")
+      return false;
+   }
+   else if(isNaN(telefono)){
+      alert("El telefono ingresado no es un numero")
       return false;
    }
    else if(correo.length >60){
