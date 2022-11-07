@@ -710,7 +710,6 @@ input, textarea {
 
 .title{
     text-align: center;
-    grid-area: enlace;
     border: 0.1em solid #370101;
     background-color: #e5e9dc;
     padding: 0.5em;
@@ -720,7 +719,7 @@ input, textarea {
 }
 
 .container_adopcion{
-    width: 100%;
+    width: auto;
     max-width: 1200px;
     /*height: 630px;*/
     display: flex;
