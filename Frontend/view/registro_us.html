@@ -86,10 +86,10 @@
               <input class="input" type="text" placeholder="Telefono" id="telefono" required >
               <input class="input" type="email" placeholder="Correo" id="email" required >
 			  <input class="input" type="password" placeholder="Contraseña" id="password" required>
-              <select class="input form-select provincias" name="Provincia" aria-label="Default select example" oninput="getDepartamentos()">
+              <select class="input form-select provincias" name="Provincia" aria-label="Default select example" oninput="getDepartamentos()" required>
                  <option selected>Provincia</option>
               </select>
-              <select class="input form-select departamentos" name="Departamento" aria-label="Default select example" disabled>
+              <select class="input form-select departamentos" name="Departamento" aria-label="Default select example" disabled required>
                  <option selected>Departamento</option>
               </select>
 			  <button type="submit" class="btn">Registrarse</button>

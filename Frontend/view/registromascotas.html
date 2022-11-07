@@ -84,28 +84,28 @@
                 <option value="Quiero adoptar una mascota">Quiero dar en adopción una mascota</option>
             </select>
             <div class="selects">
-                <select class="form-select provincias" name="Provincia" aria-label="Default select example" oninput="getDepartamentos()">
+                <select class="form-select provincias" name="Provincia" aria-label="Default select example" oninput="getDepartamentos()" required>
                     <option selected>Provincia</option>
                 </select>
-                <select class="form-select departamentos" name="Departamento" aria-label="Default select example" disabled>
+                <select class="form-select departamentos" name="Departamento" aria-label="Default select example" disabled required>
                     <option selected>Departamento</option>
                 </select>
-                <select class="form-select especie" name="Especie" aria-label="Default select example" oninput="getRazas()">
+                <select class="form-select especie" name="Especie" aria-label="Default select example" oninput="getRazas()" required>
                     <option selected>Especie</option>
                     <option value="1">Perro</option>
                     <option value="2">Gato</option>
                     <option value="3">Otro</option>
                 </select>
-                <select class="form-select" id="raza" name="Raza" aria-label="Default select example" disabled>
+                <select class="form-select" id="raza" name="Raza" aria-label="Default select example" disabled required>
                     <option selected>Raza</option>
                 </select>
-                <select class="form-select" name="Sexo" aria-label="Default select example">
+                <select class="form-select" name="Sexo" aria-label="Default select example" required>
                     <option selected>Sexo</option>
                     <option value="1">Macho</option>
                     <option value="2">Hembra</option>
                     <option value="3">No sé</option>
                 </select>
-                <select class="form-select" name="Edad" aria-label="Default select example">
+                <select class="form-select" name="Edad" aria-label="Default select example" required>
                     <option selected>Edad</option>
                     <option value="1">0 - 3 años</option>
                     <option value="2">4 - 6 años</option>
@@ -116,27 +116,27 @@
                     <option value="7">Más de 18 años</option>
                     <option value="8">No sé</option>
                 </select>
-                <select class="form-select" name="Color principal" aria-label="Default select example">
+                <select class="form-select" name="Color principal" aria-label="Default select example" required>
                     <option selected>Color principal</option>
                     <option value="1">Blanco</option>
                     <option value="2">Negro</option>
                     <option value="3">Marrón</option>
                     <option value="4">Gris</option>
                 </select>
-                <select class="form-select" name="Color secundario" aria-label="Default select example">
+                <select class="form-select" name="Color secundario" aria-label="Default select example" required>
                     <option selected>Color secundario</option>
                     <option value="1">Blanco</option>
                     <option value="2">Negro</option>
                     <option value="3">Marrón</option>
                     <option value="4">Gris</option>
                 </select>
-                <select class="form-select" name="Orejas" aria-label="Default select example">
+                <select class="form-select" name="Orejas" aria-label="Default select example" required>
                     <option selected>Orejas</option>
                     <option value="1">Paradas</option>
                     <option value="2">Caídas</option>
                     <option value="3">Muy largas</option>
                 </select>
-                <select class="form-select" name="Cola" aria-label="Default select example">
+                <select class="form-select" name="Cola" aria-label="Default select example" required>
                     <option selected>Cola                                                                                                                                    </option>
                     <option value="1">Corta</option>
                     <option value="2">Larga</option>
