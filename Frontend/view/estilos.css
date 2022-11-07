@@ -581,6 +581,11 @@ button img {
     font-weight: 600;
     cursor: pointer;
 }
+
+.login-container select {
+    margin-bottom: 32px;
+}
+
 @media screen and (max-width: 1000px) {
     .login-container {
         width: 70%;
@@ -670,6 +675,10 @@ input, textarea {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+}
+
+.fin_de_compra label {
+    margin: 0.2em;
 }
 .finalizar{
     font-size: 18px;
@@ -789,7 +798,7 @@ input, textarea {
 }
 
 .registro_mascotas {
-    width: 400px;
+    width: 410px;
     height: auto;
     border: 20px;
     margin: 20px;
@@ -799,7 +808,7 @@ input, textarea {
 }
 
     .registro_mascotas label {
-        font-size: 14px;
+        font-size: 16px;
         display: block;
         width: 100%;
         
@@ -840,10 +849,20 @@ input, textarea {
             margin: auto;
         }
 
-            .registro_mascotas input[type="submit"]:hover {
-                background-position: right center;
-                color: #370101;
-            }
+        .registro_mascotas input[type="submit"]:hover {
+            background-position: right center;
+            color: #370101;
+        }
+
+        .selects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1em;
+        }
+
+        .registro_mascotas .form-select {
+            margin: 0 0 1em;
+        }
 
 .regis_mas h4 {
     padding: 15px;

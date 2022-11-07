@@ -14,6 +14,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 	 <!--Fuente fontawesome-->
 	 <script src="https://kit.fontawesome.com/98b3766597.js" crossorigin="anonymous"></script>
+     <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 	<link rel="stylesheet" href="./estilos.css">
 </head>
 
@@ -84,7 +86,12 @@
               <input class="input" type="text" placeholder="Telefono" id="telefono" required >
               <input class="input" type="email" placeholder="Correo" id="email" required >
 			  <input class="input" type="password" placeholder="Contraseña" id="password" required>
-
+              <select class="input form-select provincias" name="Provincia" aria-label="Default select example" oninput="getDepartamentos()">
+                 <option selected>Provincia</option>
+              </select>
+              <select class="input form-select departamentos" name="Departamento" aria-label="Default select example" disabled>
+                 <option selected>Departamento</option>
+              </select>
 			  <button type="submit" class="btn">Registrarse</button>
               <p class="warnings" id="warnings"></p>
 
@@ -128,5 +135,6 @@
 
 </footer>
 <script src="js/validacion_registro_usuario.js"></script>
+<script src="./js/opcionesSelect.js"></script>
 </body>
 </html>
