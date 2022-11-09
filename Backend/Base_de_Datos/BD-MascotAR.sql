@@ -1,1 +1,0 @@
-alter table orden add fecha date;
