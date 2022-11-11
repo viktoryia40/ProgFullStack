@@ -28,6 +28,7 @@ def pedirDatosActualizacion(usuarios):
     for us in usuarios:
         if us[0] == usuarioEditar:
             existeId = True
+            usuarioInicial = us
             break
 
     if existeId:
@@ -42,6 +43,7 @@ def pedirDatosActualizacion(usuarios):
         idDepartamento = int(input("Ingrese numero de departamento a modificar: "))
 
         usuario = (usuarioEditar, username, contraseña, email, nombre, apellido, telefono, direccion, idProvincia, idDepartamento)
+        usuarioFinal = usuario
     else:
         usuario = None
 
@@ -61,4 +63,20 @@ def pedirDatosEliminar(usuarios):
 
     return usuarioEliminar
 
+def listarMovimientos(movimientos):
+    print("\nHistorial de movimientos:\n")
+    contador = 1
+    for mov in movimientos:
+        if mov[2] == 2:
+            datos = "{0}. {1} - Se consultó la lista de usuarios\n"
+            print(datos.format(contador, mov[1])) 
+        else:    
+            if mov[2] == 1:
+                datos = "{0}. {1} - Se creó el usuario --> ID: {2} | Username: {3} | Contraseña: {4} | Email: {5} | Nombre: {6} | Apellido: {7} | Telefono: {8} | Direccion: {9} | idProvincia: {10} | idDepartamento: {11}\n"
+            elif mov[2] == 3:
+                datos = "{0}. {1} - Se actualizó el usuario --> ID: {2} | Username: {3} | Contraseña: {4} | Email: {5} | Nombre: {6} | Apellido: {7} | Telefono: {8} | Direccion: {9} | idProvincia: {10} | idDepartamento: {11}\n"        
+            elif mov[2] == 4:
+                datos = "{0}. {1} - Se eliminó el usuario --> ID: {2} | Username: {3} | Contraseña: {4} | Email: {5} | Nombre: {6} | Apellido: {7} | Telefono: {8} | Direccion: {9} | idProvincia: {10} | idDepartamento: {11}\n"
+            print(datos.format(contador, mov[1], mov[3], mov[4], mov[5], mov[6], mov[7], mov[8], mov[9], mov[10], mov[11], mov[12]))      
+        contador += 1   
 

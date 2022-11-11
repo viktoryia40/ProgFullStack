@@ -14,9 +14,8 @@ function validar(){
         alert("Elija una opción, por favor")
         return false;
     }
-    let especie=document.getElementById("especie").value;
+    let especie=document.getElementsByClassName("especie").value;
     let raza=document.getElementById("raza").value;
-    let zona=document.getElementById("zona").value;
     let foto=document.getElementById("foto").value;
     let descripcion=document.getElementById("descripcion").value;
     console.log(nombre);
@@ -24,7 +23,6 @@ function validar(){
     console.log(registro);
     console.log(especie);
     console.log(raza);
-    console.log(zona);
     console.log(foto);
     console.log(descripcion);
 }

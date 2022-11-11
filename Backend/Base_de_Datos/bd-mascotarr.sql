@@ -62,7 +62,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mascotar`.`usuario` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `username` VARCHAR(15) NOT NULL,
+  `username` VARCHAR(15) NOT NULL UNIQUE,
   `contraseña` VARCHAR(30) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `nombre` VARCHAR(25) NOT NULL,
@@ -381,7 +381,51 @@ DEFAULT CHARACTER SET = utf8mb4;
 
 CREATE INDEX `fk_usuarioMensaje` ON `mascotar`.`mensaje` (`idUsuario` ASC) VISIBLE;
 
+-- -----------------------------------------------------
+-- Table `mascotar`.`estadoRegistro`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mascotar`.`estadoRegistro` (
+  `id` INT(11) NOT NULL,
+  `nombre` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+-- -----------------------------------------------------
+-- Table `mascotar`.`movimientosBD`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mascotar`.`movimientosBD` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `fecha` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `idEstadoRegistro` INT(11) NOT NULL,
+  `idUsuario` INT(11),
+  `username` VARCHAR(15),
+  `contraseña` VARCHAR(30),
+  `email` VARCHAR(45),
+  `nombre` VARCHAR(25),
+  `apellido` VARCHAR(25),
+  `telefono` INT(11),
+  `direccion` VARCHAR(45),
+  `idProvincia` INT(11),
+  `idDepartamento` INT(11),
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_estadoRegistro`
+    FOREIGN KEY (`idEstadoRegistro`)
+    REFERENCES `mascotar`.`estadoRegistro` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+CREATE INDEX `fk_estadoRegistro` ON `mascotar`.`movimientosBD` (`idEstadoRegistro` ASC) VISIBLE;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- -----------------------------------------------------
+-- Valores tabla estadoRegistro
+-- -----------------------------------------------------
+
+INSERT INTO estadoRegistro (id, nombre) 
+VALUES (1, "Creado"), (2, "Consultado"), (3, "Modificado"), (4, "Eliminado");
+
+

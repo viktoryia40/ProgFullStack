@@ -1,5 +1,7 @@
 import mysql.connector
 from mysql.connector import Error
+from datetime import date
+from datetime import datetime
 
 class Conectar():
 
@@ -9,7 +11,7 @@ class Conectar():
                 host = '127.0.0.1',
                 port = 3306,
                 user = 'root',
-                password = '8134711',
+                password = 'Vane0889',
                 db = 'mascotar'
             )
         except Error as ex:
@@ -57,3 +59,32 @@ class Conectar():
                 print("Usuario eliminado! \n")
             except Error as ex:
                 print("Error al intentar la conexion: {0}".format(ex))
+
+    def registrarMovimientoBD(self, movimiento, usuario = None):
+        if self.connexion.is_connected():
+            try:
+                cursor = self.connexion.cursor()
+                if movimiento == 2:
+                    sql= "INSERT INTO movimientosBD (idEstadoRegistro) VALUES ({0})"
+                    cursor.execute(sql.format(movimiento))
+                else:    
+                    if movimiento == 1:
+                        sql = "SELECT * FROM usuario WHERE username = '{0}'"   
+                        cursor.execute(sql.format(usuario[0]))
+                        usuario = cursor.fetchone()
+                    sql= "INSERT INTO movimientosBD (idEstadoRegistro, idUsuario, username, contraseña, email, nombre, apellido, telefono, direccion, idProvincia, idDepartamento) VALUES ({0}, {1}, '{2}', '{3}', '{4}', '{5}', '{6}', {7}, '{8}', {9}, {10})"
+                    cursor.execute(sql.format(movimiento, usuario[0], usuario[1], usuario[2], usuario[3], usuario[4], usuario[5], usuario[6], usuario[7], usuario[8], usuario[9]))
+                self.connexion.commit()
+            except Error as ex:
+                print("Error al intentar la conexion: {0}".format(ex))
+
+    def obtenerMovimientos(self):
+        if self.connexion.is_connected():
+            try:
+                cursor = self.connexion.cursor()
+                cursor.execute("SELECT * FROM movimientosBD ORDER BY id ASC")
+                resultados = cursor.fetchall()
+                return resultados
+            except Error as ex:
+                print("Error al intentar la conexion: {0}".format(ex))            
+
