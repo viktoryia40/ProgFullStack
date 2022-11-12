@@ -17,7 +17,6 @@ body {
 .despleg {
     background: linear-gradient(#FFFAFA, #f0e552);
     height: auto;
-   
 }
 .dws_menu *{
     margin: 0;
@@ -68,81 +67,21 @@ body {
     margin: 0px;
     display: none;
     background-color: #f0e552; /*Le agregué el color de fondo porque sino al desplegar las opciones se confundía con el texto de contenido de la pag*/
+    z-index:20;
     
 }
-    .dws_menu li > ul li a {
+.dws_menu li > ul li a {
         padding: 10px;
         font-size: 14px;
         text-transform: uppercase;
-        
+        z-index: 20;
     }
 .dws_menu li > ul li ul{
     position: absolute;
     right: -150px;
     top: 0;
+    z-index:20;
 }
-
-.dws_menu li:hover > ul {
-    display: block;
-}
-
-
-/**CAROUSEL SLIDER**/
-
-.container-slider{
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-
-}
-
-.slider{
-display: flex;
-width: 500%;
-height: 500px;
-margin-left: -100%;
-}
-
-.slider__section{
-width: 100%;
-}
-
-.slider__img{
-    display: block;
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
-.slider__btn{
-position: absolute;
-width: 40px;
-height: 40px;
-background: rgba(255, 255, 255, 0.7);
-top: 50%;
-transform: translateY(-50%);
-font-size: 30px;
-font-weight: bold;
-font-family: monospace;
-text-align: center;
-border-radius: 50%;
-cursor: pointer;
-}
-
-.slider__btn:hover{
-    background:#fff;
-}
-
-.slider__btn--left{
-    left: 10px;
-}
-
-.slider__btn--right{
-    right: 10px;
-}
-
 /* ===== MEDIA ====*/
 .dws_menu [type="checkbox"], 
 .dws_menu label.toggleSubmenu{
@@ -161,6 +100,12 @@ cursor: pointer;
     top: 15px;
     left: 12px;
     font-size: 18px;
+}
+
+@media (min-width:1000px) { 
+    .dws_menu li:hover > ul {
+    display: block;
+  } 
 }
 @media all and (max-width:1000px) {
     .dws_menu {
@@ -226,113 +171,210 @@ background:linear-gradient(#f7ecec, #f5ed81);
 
 }
 
+/**CAROUSEL SLIDER**/
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  .mySlides {
+      display: none;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 
 /*main Mascotas perdidas-encontradas*/
 
 .publicaciones {
     display: grid;
-    grid-template-areas: 
-    "titulo titulo"
-    "descripcion descripcion"
-    "enlace enlace"
-    "filtros posts";
-    column-gap: 1em;
+    grid-template-columns: auto;
     margin-bottom: 1.5em;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
 }
-
 .publicaciones h1 {
-    grid-area: titulo;
-    justify-self: center;
     margin-top: 0.3em;
-
+    font-weight: 600;
+    font-size: 3em;
 }
 
+.publicaciones h3 {
+    background-color: #e3f8ce;
+    width: 90%;
+    border-radius: 1em;
+}
 
 .publicaciones p {
-    grid-area: descripcion;
-    margin-left: 0.3em;
-    justify-self: center;
     font-weight: 500;
+    margin-bottom: 0.8em;
+    font-size: 1.2em;
 }
 
 #enlaceForm {
-    grid-area: enlace;
     border: 0.1em solid #370101;
     background-color: #e5e9dc;
     padding: 0.5em;
     border-radius: 10px;
     font-weight: 600;
+    text-align: center;
+    justify-self: center;
 }
 
 #enlaceForm a {
-    color: #829c42;
+    color: rgb(102, 150, 57);
 }
 
-.filtros {
-    grid-area: filtros;
-    background-color: #ece697;
-    padding: 1em;
-    width: auto;
-    font-weight: 400;
-    color: #370101;
+hr {
+    width: 98%;
+    margin: 0.8em 0;
 }
 
-.ulPrincipal {
-    padding-left: 0.5em;
+#filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
 }
 
-.ulPrincipal li {
-    list-style: none;
-    padding-top: 0.3em;
-    font-size: 1em;
-    padding-left: 0em;
+#filtros select {
+    width: fit-content;
+    height: 2.5em;
+    margin: 0.35em;
+    background-color: rgb(252, 250, 121);
+    font-weight: bolder;
+    border: none;
 }
 
-.ulSecundaria {
-    padding-left: 1.3em;
-    padding-right: 0.3em;
+#filtros select:hover {
+    background-color: rgb(241, 228, 158);
 }
 
-.ulSecundaria li{
-    list-style: none;
-    padding: 0.2em;
-    font-size: 0.9em;
+#filtros option {
+    background-color: rgb(255, 255, 255);
+}
+
+#btnBuscador {
+    background-color: rgb(138, 182, 97);
+    width: 8.5em;
+    height: 2.8em;
+    padding: 0;
+    margin: 0 0.35em;
+}
+
+#btnBuscador:hover {
+    background-color: rgb(111, 136, 87);
+}
+
+button img {
+    width: 1em;
+}
+
+.selectOculto, .botonOculto {
+    display: none !important; 
+}
+
+#btnFiltroEspecializado, #btnFiltroRapido {
+    height: fit-content;
+    padding: 0.3em;
+    margin: 0.5em;
+    justify-self: center;
+    align-self: center;
+    width: 65%;
+    background-color: rgb(218, 204, 134);
+}
+
+#btnFiltroEspecializado:hover, #btnFiltroRapido:hover {
+    background-color: rgb(201, 194, 159);
 }
 
 .publicaciones section {
-    grid-area: posts;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
-    margin-right: 1.5em;
+    gap: 2em;
+    margin: 2em;
 }
 
 .publicaciones .card {
     justify-self: center;
     text-align: center;
     width: 100%;
+    max-width: 30em;
 }
 
 .publicaciones .btn-primary {
     background-color: rgb(248, 219, 88);
-    border-color: #000000;
+    border-color: rgb(0, 0, 0);
 }
 
 .publicaciones .btn-primary:active,
 .btn-primary:hover {
-    background-color: #d9cb83;
-    border-color: #000000;
+    background-color: rgb(248, 219, 88);
+    border-color: rgb(0, 0, 0);
 }
+
 /*Diseño para móvil*/
 
 @media screen and (max-width:575px) {
 
     /*main perdidos-encontrados*/
 
-    .publicaciones {
-        grid-template-columns: 30% auto;
-        gap: 0.3em;
-    }
     .publicaciones p, #enlaceForm {
         text-align: center;
     }
@@ -350,10 +392,6 @@ background:linear-gradient(#f7ecec, #f5ed81);
 
     /*main perdidos-encontrados*/
 
-    .publicaciones {
-        grid-template-columns: 20% auto;
-        gap: 0.6em;
-    }
     .publicaciones p, #enlaceForm {
         text-align: center;
     }
@@ -543,6 +581,11 @@ background:linear-gradient(#f7ecec, #f5ed81);
     font-weight: 600;
     cursor: pointer;
 }
+
+.login-container select {
+    margin-bottom: 32px;
+}
+
 @media screen and (max-width: 1000px) {
     .login-container {
         width: 70%;
@@ -633,6 +676,10 @@ input, textarea {
     background-size: cover;
     display: flex;
 }
+
+.fin_de_compra label {
+    margin: 0.2em;
+}
 .finalizar{
     font-size: 18px;
     background-color: #b1af49;
@@ -671,13 +718,7 @@ input, textarea {
 /*-----MascotAdopcion----*/
 
 .title{
-    /* text-align: center;
-    font-size: 60px;
-    color: #0f0b06;
-    margin-top: 100px;
-    font-weight: 500; */
     text-align: center;
-    grid-area: enlace;
     border: 0.1em solid #370101;
     background-color: #e5e9dc;
     padding: 0.5em;
@@ -687,9 +728,9 @@ input, textarea {
 }
 
 .container_adopcion{
-    width: 100%;
+    width: auto;
     max-width: 1200px;
-    height: 430px;
+    /*height: 630px;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -730,19 +771,17 @@ input, textarea {
 /*productos*/
 
 .publicaciones_productos h1 {
-    grid-area: titulo;
     justify-self: center;
     margin-top: 2em;
     margin-bottom: 1em;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 3em;
     background-image: linear-gradient(120deg, #F09819,#EDDE5D 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
     background-position: 0 100%;
 }
 .publicaciones_productos p {
-    grid-area: descripcion;
     justify-self: center;
     font-weight: 400;
     font-size: 1.2em;
@@ -759,7 +798,7 @@ input, textarea {
 }
 
 .registro_mascotas {
-    width: 400px;
+    width: 410px;
     height: auto;
     border: 20px;
     margin: 20px;
@@ -769,7 +808,7 @@ input, textarea {
 }
 
     .registro_mascotas label {
-        font-size: 14px;
+        font-size: 16px;
         display: block;
         width: 100%;
         
@@ -810,10 +849,20 @@ input, textarea {
             margin: auto;
         }
 
-            .registro_mascotas input[type="submit"]:hover {
-                background-position: right center;
-                color: #370101;
-            }
+        .registro_mascotas input[type="submit"]:hover {
+            background-position: right center;
+            color: #370101;
+        }
+
+        .selects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1em;
+        }
+
+        .registro_mascotas .form-select {
+            margin: 0 0 1em;
+        }
 
 .regis_mas h4 {
     padding: 15px;

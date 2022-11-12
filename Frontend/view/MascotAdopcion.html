@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -67,90 +67,137 @@
         </nav>	
    </header>
   
+    <main class="publicaciones">
+        <h1 class="title"> ADOPTÁ UNA MASCOTA</h1>
+        <p id="enlaceForm">Si perdiste, encontraste, o querés dar en adopción a un animalito; podés cargarlo <a href="./registromascotas.html">aquí</a> </p>
+        <hr>
+        <h3>Filtros</h3>  
+        <form id="filtros" method="POST"> 
+            <select class="form-select provincias" name="Provincia" aria-label="Default select example" oninput="getDepartamentos()">
+                <option selected>Provincia</option>
+            </select>
+            <select class="form-select departamentos" name="Departamento" aria-label="Default select example" disabled>
+                <option selected>Departamento</option>
+            </select>
+            <select class="form-select especie" name="Especie" aria-label="Default select example" oninput="getRazas()">
+                <option selected>Especie</option>
+                <option value="1">Perro</option>
+                <option value="2">Gato</option>
+                <option value="3">Otro</option>
+            </select>
+            <select class="form-select" id="raza" name="Raza" aria-label="Default select example" disabled>
+                <option selected>Raza</option>
+            </select>
+            <select class="form-select" name="Sexo" aria-label="Default select example">
+                <option selected>Sexo</option>
+                <option value="1">Macho</option>
+                <option value="2">Hembra</option>
+                <option value="3">No sé</option>
+            </select>
+            <select class="form-select" name="Edad" aria-label="Default select example">
+                <option selected>Edad</option>
+                <option value="1">0 - 3 años</option>
+                <option value="2">4 - 6 años</option>
+                <option value="3">7 - 9 años</option>
+                <option value="4">10 - 12 años</option>
+                <option value="5">13 - 15 años</option>
+                <option value="6">16 - 18 años</option>
+                <option value="7">Más de 18 años</option>
+                <option value="8">No sé</option>
+            </select>
+            <select class="form-select" name="Color principal" aria-label="Default select example">
+                <option selected>Color principal</option>
+                <option value="1">Blanco</option>
+                <option value="2">Negro</option>
+                <option value="3">Marrón</option>
+                <option value="4">Gris</option>
+            </select>
+            <button type="submit" id="btnBuscador" class="btn btn-primary"><img src="../imagenes/lupa.png" alt="lupa">  Buscar</button>
+        </form>
+        <hr>
+            <div class="container_adopcion">
+                    <div class="animales">
+                        <img src="../imagenes\img_1.jpeg">
+                            <h2>Mizu</h2>
+                            <p>En adopción solo en la COMUNIDAD DE MADRID. Requisito imprescindible:
+                                PROTECCIONES EN VENTANAS, BALCONES, TERRAZAS Y PATIOS. Poco sabemos acera de Mizu (agosto 2020). </p>                
+                    </div>
 
- <h1 class="title"> ADOPTÁ UNA MASCOTA</h1>
-    <div class="container_adopcion">
-            <div class="animales">
-                <img src="../imagenes\img_1.jpeg">
-                    <h2>Mizu</h2>
-                    <p>En adopción solo en la COMUNIDAD DE MADRID. Requisito imprescindible:
-                        PROTECCIONES EN VENTANAS, BALCONES, TERRAZAS Y PATIOS. Poco sabemos acera de Mizu (agosto 2020). </p>                
-            </div>
+                    <div class="animales">
+                        <img src="../imagenes\img_2.jpeg">
+                            <h2>Simba</h2>
+                            <p>Simba es un macho que tiene un año y mas o menos dos meses. Se encontraron en
+                                la basura con un mes. Por eso no se que razas son dentro. Tiene mucha energía por eso sería
+                                genial una casa con otro perro o una persona que camina mucho.</p>                   
+                    </div>
 
-            <div class="animales">
-                <img src="../imagenes\img_2.jpeg">
-                    <h2>Simba</h2>
-                    <p>Simba es un macho que tiene un año y mas o menos dos meses. Se encontraron en
-                        la basura con un mes. Por eso no se que razas son dentro. Tiene mucha energía por eso sería
-                        genial una casa con otro perro o una persona que camina mucho.</p>                   
-            </div>
+                    <div class="animales">
+                        <img src="../imagenes\img_3.jpeg">
+                            <h2>Lisa</h2>
+                            <p>Lisa y mía son dos preciosidades de gatitas que buscan persona o familia que
+                                les den los mimos que se merecen.
+                                Son unas bebes cariñosas y comilonas, además les encanta jugar y ronronear..</p>
+                    </div>
 
-            <div class="animales">
-                <img src="../imagenes\img_3.jpeg">
-                    <h2>Lisa</h2>
-                    <p>Lisa y mía son dos preciosidades de gatitas que buscan persona o familia que
-                        les den los mimos que se merecen.
-                        Son unas bebes cariñosas y comilonas, además les encanta jugar y ronronear..</p>
-            </div>
+                    <div class="animales">
+                        <img src="../imagenes\img_4.jpeg">
+                            <h2>Negri</h2>
+                            <p>Negri es alegre, cariñosa y muy buena. Se lleva bien con gatos y perros.
+                                Llevaba un tiempo abandonada en las calles de un pueblo y una señora le daba de comer.
+                                Afortunadamente.</p>
+                    </div>
 
-            <div class="animales">
-                <img src="../imagenes\img_4.jpeg">
-                    <h2>Negri</h2>
-                    <p>Negri es alegre, cariñosa y muy buena. Se lleva bien con gatos y perros.
-                        Llevaba un tiempo abandonada en las calles de un pueblo y una señora le daba de comer.
-                        Afortunadamente.</p>
-            </div>
+                    <div class="animales">
+                        <img src="../imagenes\img_5.jpeg">
+                            <h2>Zuky</h2>
+                            <p>Zuky es una perrita sociable. Es buena y cariñosa. Su dueño ha fallecido y
+                                necesita un buen hogar.</p>                
+                    </div>
 
-            <div class="animales">
-                <img src="../imagenes\img_5.jpeg">
-                    <h2>Zuky</h2>
-                    <p>Zuky es una perrita sociable. Es buena y cariñosa. Su dueño ha fallecido y
-                        necesita un buen hogar.</p>                
-            </div>
+                    <div class="animales">
+                        <img src="../imagenes\img_6.jpeg">
+                            <h2>Veky</h2>
+                            <p>CARIÑOSISIMA así es Veky,es muy buena.Ideal para tener en casa..Es
+                                preciosa,con colores muy llamativos(Carey) y pelo muy brillante...</p>
+                    </div>
 
-            <div class="animales">
-                <img src="../imagenes\img_6.jpeg">
-                    <h2>Veky</h2>
-                    <p>CARIÑOSISIMA así es Veky,es muy buena.Ideal para tener en casa..Es
-                        preciosa,con colores muy llamativos(Carey) y pelo muy brillante...</p>
-            </div>
+                    <div class="animales">
+                        <img src="../imagenes\img_7.jpeg">
+                            <h2>Yaco</h2>
+                            <p>CARIÑOSO y muy buena.Ideal para tener en casa..Es precioso y se porta muy bien.</p>
+                    </div>
 
-            <div class="animales">
-                <img src="../imagenes\img_7.jpeg">
-                    <h2>Yaco</h2>
-                    <p>CARIÑOSO y muy buena.Ideal para tener en casa..Es precioso y se porta muy bien.</p>
-            </div>
+                    <div class="animales">
+                        <img src="../imagenes\img_8.jpeg">
+                            <h2>Carola</h2>
+                            <p>Excelente perra para tener en casa, se adapta muy bien con los niños y es muy protectora..</p>
+                    </div>
 
-            <div class="animales">
-                <img src="../imagenes\img_8.jpeg">
-                    <h2>Carola</h2>
-                    <p>Excelente perra para tener en casa, se adapta muy bien con los niños y es muy protectora..</p>
-            </div>
+                    <div class="animales">
+                        <img src="../imagenes\img_9.jpeg">
+                            <h2>Tefi</h2>
+                            <p>Es un perrito muy sufrido, por lo que necesita cariño y contencion, se adapta muy bien con los demas perritos.</p>                
+                    </div>
 
-            <div class="animales">
-                <img src="../imagenes\img_9.jpeg">
-                    <h2>Tefi</h2>
-                    <p>Es un perrito muy sufrido, por lo que necesita cariño y contencion, se adapta muy bien con los demas perritos.</p>                
-            </div>
+                    <div class="animales">
+                        <img src="../imagenes\img_10.jpeg">
+                            <h2>Teo</h2>
+                            <p>Lo encontramos solito en el campo, es muy cariñoso, excelente para niños..</p>
+                    </div>
 
-            <div class="animales">
-                <img src="../imagenes\img_10.jpeg">
-                    <h2>Teo</h2>
-                    <p>Lo encontramos solito en el campo, es muy cariñoso, excelente para niños..</p>
-            </div>
+                    <div class="animales">
+                        <img src="../imagenes\img_11.jpeg">
+                            <h2>Tita</h2>
+                            <p>Es una perrita guardiana, se lleva muy bien con los demas perros y es muy cariñosa</p>
+                    </div>
 
-            <div class="animales">
-                <img src="../imagenes\img_11.jpeg">
-                    <h2>Tita</h2>
-                    <p>Es una perrita guardiana, se lleva muy bien con los demas perros y es muy cariñosa</p>
+                    <div class="animales">
+                        <img src="../imagenes\img_12.jpeg">
+                            <h2>Bunqui</h2>
+                            <p>Un perrito muy activo, cariño y le encanta los niños.</p>
+                    </div>
             </div>
-
-            <div class="animales">
-                <img src="../imagenes\img_12.jpeg">
-                    <h2>Bunqui</h2>
-                    <p>Un perrito muy activo, cariño y le encanta los niños.</p>
-            </div>
-    
+    </main>         
 
      <!---footer----->
      <footer class="pie-pagina">
@@ -182,8 +229,8 @@
         <div class="grupo-2">
             <small>&copy; 2022 <b>MascotAR</b> - Todos los Derechos Reservados - Desarrollado por <b>Optimos WEB</b></small>
         </div>    
-        </footer>
-    
+     </footer>
+     <script src="./js/opcionesSelect.js"></script>
 </body>
 </html>
    

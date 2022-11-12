@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,7 +63,7 @@
         </nav>	
    </header>
   
-   <form>
+   <form onsubmit="return validarFormulario();" method="post">
         <div class="fin_de_compra">
 
         <fieldset class="finalizar">
@@ -84,14 +84,20 @@
              <input type="tel" name="Código Postal" id="codigopostal" size="26px">
          </p>
      <p>
+        <label for="Provincia">Provincia:
+            <select class="provincias" name="Provincia" aria-label="Default select example" oninput="getDepartamentos()" required>
+                <option value="">Seleccionar...</option>
+            </select>
+        </label>
+        
+        <label for="Departamento">Departamento:
+            <select class="departamentos" name="Departamento" aria-label="Default select example" disabled required>
+                <option value="">Seleccionar...</option>
+            </select>
+        </label>
+  
+
      
-             <label>Localidad</label>
-             <input type="tel" name="Localidad" id="localidad" size="26px">
-         </p>
-         <p>
-             <label>Provincia</label>
-             <input type="tel" name="Provincia" id="provincia" size="26px">
-         </p>
          <label>Forma de Pago:</label>
          <select name="Forma de Pago" id="pago">
             <option value="">Seleccionar...</option> 
@@ -100,7 +106,7 @@
          </select>
  
      <p>
-        <input type="button" onclick="validacion()"; value="Enviar"/>
+        <input type="submit" value="ENVIAR"/>
      </p>    
      </fieldset>
         </div>
@@ -135,6 +141,7 @@
         <small>&copy; 2022 <b>MascotAR</b> - Todos los Derechos Reservados - Desarrollado por <b>Optimos WEB</b></small>
     </div>
 </footer>
-<script src="javascript.js"></script>
+<script src="js/js_fin_compra.js"></script>
+<script src="./js/opcionesSelect.js"></script>
 </body>
 </html>
