@@ -84,7 +84,43 @@ DEFAULT CHARACTER SET = utf8mb4;
 CREATE INDEX `fk_provincia` ON `mascotar`.`usuario` (`idProvincia` ASC) VISIBLE;
 
 CREATE INDEX `fk_departamento` ON `mascotar`.`usuario` (`idDepartamento` ASC) VISIBLE;
-
+ 
+ -- insertar usuarios--
+insert into usuario (username, contraseña, email, nombre, apellido, telefono, direccion, idProvincia, idDepartamento)
+ values ('juanpepez', '22113efdd', 'juanpepez@gmai.com', 'Juan', 'Pepez', 223347732, 'Cordoba', 1, 8), 
+ ('mariapanza', '22113ds', 'mariapanza@gmai.com', 'Maria', 'Panza', 954736264, 'Buenos Aires', 7, 3),
+ ('pedromaida', 'cjd432', 'pedromaida@gmai.com', 'Pedro', 'Maidana', 43294837, 'Pinamar', 3, 7);
+ 
+ -- seleccionar todos los registros--
+ select * from usuario;
+ 
+ -- seleccionar campos espesificos--
+ select username, nombre from usuario;
+ 
+ -- condicion de la consulta--
+ select *from usuario where id = 1;
+ 
+ -- actualizar registros --
+ update usuario set username = 'sofi' where username = 'mariapanza';
+ 
+ -- inner join --
+ select u.nombre, u.apellido, u.direccion, m.descripcion, m.idRaza 
+ from usuario as u
+ inner join mascota as m
+ on u.idProvincia = m.id;
+ 
+ -- left join --
+ select u.nombre, u.apellido, u.direccion, m.descripcion, m.idRaza 
+ from usuario as u
+ left join mascota as m
+ on u.idProvincia = m.id;
+ 
+ -- right join --
+ select u.nombre, u.apellido, u.direccion, m.descripcion, m.idRaza 
+ from usuario as u
+ right join mascota as m
+ on u.idProvincia = m.id;
+ 
 
 -- -----------------------------------------------------
 -- Table `mascotar`.`carrito`
@@ -279,7 +315,6 @@ CREATE TABLE IF NOT EXISTS `mascotar`.`sexo` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
-
 -- -----------------------------------------------------
 -- Table `mascotar`.`mascota`
 -- -----------------------------------------------------
@@ -363,7 +398,15 @@ CREATE INDEX `fk_orejas` ON `mascotar`.`mascota` (`idOrejas` ASC) VISIBLE;
 
 CREATE INDEX `fk_cola` ON `mascotar`.`mascota` (`idCola` ASC) VISIBLE;
 
-
+insert into mascota (idUsuario, idEstado, idProvincia, idDepartamento, idEspecie, idRaza, idSexo, idEdad, idColorPrincipal, idColorSecundario, idOrejas, idCola, linkImagen, descripcion)
+ values (7, 3, 7, 1, 6, 1, 2, 2, 1, 5, 6, 2, 'https://ar.images.search', 'Perro'),
+ (5, 3, 1, 8, 6, 1, 2, 2, 1, 5, 6, 2, 'https://ar.images.search', 'Gato1'),
+ (6, 3, 7, 3, 6, 1, 2, 2, 1, 5, 6, 2, 'https://ar.images.search', 'Perro2'),
+ (1, 3, 2, 1, 6, 1, 2, 2, 1, 5, 6, 2, 'https://ar.images.search', 'Perro'); 
+ 
+ select * from mascota;
+ select * from mascota where idUsuario = 1;
+ 
 -- -----------------------------------------------------
 -- Table `mascotar`.`mensaje`
 -- -----------------------------------------------------
