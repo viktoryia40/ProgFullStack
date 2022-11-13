@@ -787,6 +787,151 @@ input, textarea {
     font-size: 1.2em;
     margin-bottom: 2em;
 }
+/* Carrito */
+
+.container--carrito{
+    font-family: 'Inter';
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0e552;
+    width: 60%;
+    margin: 10vh auto;
+    border-radius: 20px;
+}
+.productos{
+    display: flex;
+    flex-direction: row;
+    margin: 1em auto;
+    width: 90%;
+    height: auto;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f2eda4;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.quantity--container{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    width: 13em;
+    background-color: #f2eda4;
+}
+
+#quan{
+    width: 10em;
+    height: 100%;
+    margin: 0;
+    background-color: #f2eda4;
+    text-align: center;
+}
+#quantity{
+    width: 13em;
+    text-align: center;
+}
+.quantity--container input{
+    margin-left: 0;
+    width: 3em;
+    margin: 16px 0;
+    text-align: center;
+}
+.del{
+    margin-left: 1em;
+    width: 50%;
+}
+.descripcion{
+    font-weight: bold;
+}
+.fin{
+    width: 20%;
+    margin: auto;
+}
+.cart{
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    padding: 20px 0;
+}
+.fin--span{
+    font-weight: bold;
+    text-align: center;
+    margin: 10px auto;
+    color: red;
+}
+.fin--container{
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    padding: 20px 0;
+}
+.producto,
+.precio{
+    font-weight: 600;
+}
+@media screen and (max-width:800px){
+    
+    .productos{
+        display: flex;
+        flex-direction: column;
+        margin: 1em auto;
+        width: 90%;
+        height: auto;
+        align-content: space-between;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #f2eda4;
+        padding: 50px;
+        border-radius: 20px;
+    }
+    .quantity--container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        margin: 10px;
+        padding: 0;
+        text-align: center;
+        height: auto;
+        width: auto;
+        background-color: #f2eda4;
+    }
+    .quantity--container input{
+        margin-left: 0;
+        width: 3em;
+        margin: 16px 0;
+    }
+    .del{
+        margin-left: 0;
+        width: 3em;
+    }
+    #quan{
+        width: auto;
+        height: 100%;
+        margin: auto;
+        background-color: #f2eda4;
+
+    }
+    .fin{
+        width: 80%;
+        margin: auto;
+    }
+    .fin--container{
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+}
 /*Registro de mascotas*/
 .photo {
     background-image: url(https://st2.depositphotos.com/1054904/7850/i/450/depositphotos_78508482-stock-photo-black-cat.jpg);

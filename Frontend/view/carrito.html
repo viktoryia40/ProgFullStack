@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,8 +63,16 @@
         </nav>	
    </header>
 
- <h1>Carrito esta vacio</h1>
-
+ <div id="container--carrito" class="container--carrito">
+    <div class="productos descripcion">
+        <p class="producto">Producto</p>
+        <p class="precio">Precio</p>
+        <p id="quantity">Cantidad</p>
+    </div>
+ </div>
+ <div class="fin--container" id="fin--container">
+    <button class="btn fin" id="fin">Finalizar la compra</button>
+</div>
 
 <!---Pie de Pagina---->
  <footer class="pie-pagina">
@@ -93,10 +101,11 @@
         </div>
     </div>
     <div class="grupo-2">
-        <small>&copy; 2022 <b>MascotAR</b> - Todos los Derechos Reservados - Desarrollado por <b>Optimus WEB</b></small>
+        <small>&copy; 2022 <b>MascotAR</b> - Todos los Derechos Reservados - Desarrollado por <b>Optimos WEB</b></small>
     </div>
 </footer>
 </body>
+<script src="../view/js/carrito.js"></script>
 </html>
     
 </body>
