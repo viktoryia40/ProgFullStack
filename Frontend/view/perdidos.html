@@ -71,28 +71,28 @@
         <h3>Filtro rápido</h3>  
         <form id="filtros" method="POST"> 
             <select class="form-select provincias" name="Provincia" aria-label="Default select example" oninput="getDepartamentos()">
-                <option selected>Provincia</option>
+                <option value="" selected>Provincia</option>
             </select>
             <select class="form-select departamentos" name="Departamento" aria-label="Default select example" disabled>
-                <option selected>Departamento</option>
+                <option value="" selected>Departamento</option>
             </select>
             <select class="form-select especie" name="Especie" aria-label="Default select example" oninput="getRazas()">
-                <option selected>Especie</option>
+                <option value="" selected>Especie</option>
                 <option value="1">Perro</option>
                 <option value="2">Gato</option>
                 <option value="3">Otro</option>
             </select>
             <select class="form-select especializado selectOculto" id="raza" name="Raza" aria-label="Default select example" disabled>
-                <option selected>Raza</option>
+                <option value="" selected>Raza</option>
             </select>
             <select class="form-select" name="Sexo" aria-label="Default select example">
-                <option selected>Sexo</option>
+                <option value="" selected>Sexo</option>
                 <option value="1">Macho</option>
                 <option value="2">Hembra</option>
                 <option value="3">No sé</option>
             </select>
             <select class="form-select especializado selectOculto" name="Edad" aria-label="Default select example">
-                <option selected>Edad</option>
+                <option value="" selected>Edad</option>
                 <option value="1">0 - 3 años</option>
                 <option value="2">4 - 6 años</option>
                 <option value="3">7 - 9 años</option>
@@ -103,31 +103,31 @@
                 <option value="8">No sé</option>
             </select>
             <select class="form-select" name="Color principal" aria-label="Default select example">
-                <option selected>Color principal</option>
+                <option value="" selected>Color principal</option>
                 <option value="1">Blanco</option>
                 <option value="2">Negro</option>
                 <option value="3">Marrón</option>
                 <option value="4">Gris</option>
             </select>
             <select class="form-select especializado selectOculto" name="Color secundario" aria-label="Default select example">
-                <option selected>Color secundario</option>
+                <option value="" selected>Color secundario</option>
                 <option value="1">Blanco</option>
                 <option value="2">Negro</option>
                 <option value="3">Marrón</option>
                 <option value="4">Gris</option>
             </select>
             <select class="form-select especializado selectOculto" name="Orejas" aria-label="Default select example">
-                <option selected>Orejas</option>
+                <option value="" selected>Orejas</option>
                 <option value="1">Paradas</option>
                 <option value="2">Caídas</option>
                 <option value="3">Muy largas</option>
             </select>
             <select class="form-select especializado selectOculto" name="Cola" aria-label="Default select example">
-                <option selected>Cola                                                                                                                                    </option>
+                <option value="" selected>Cola                                                                                                                                    </option>
                 <option value="1">Corta</option>
                 <option value="2">Larga</option>
             </select>
-            <button type="submit" id="btnBuscador" class="btn btn-primary"><img src="../imagenes/lupa.png" alt="lupa">  Buscar</button>
+            <button type="submit" id="btnBuscador" class="btn btn-primary" onclick="validarForm()"><img src="../imagenes/lupa.png" alt="lupa">  Buscar</button>
         </form>
         <button type="button" class="btn btn-primary" id="btnFiltroEspecializado" onclick="mostrarFiltro(this)"><img src="../imagenes/filtrar.png" alt="lupa"> Filtro especializado</button>
         <button type="button" class="btn btn-primary botonOculto" id="btnFiltroRapido" onclick="mostrarFiltro(this)"><img src="../imagenes/filtrar.png" alt="lupa"> Filtro rápido</button>
@@ -215,7 +215,7 @@
             <small>&copy; 2022 <b>MascotAR</b> - Todos los Derechos Reservados - Desarrollado por <b>Optimus WEB</b></small>
         </div>
 </footer>
-<script src="./js/filtroEspecializado.js"></script>
+<script src="./js/filtros.js"></script>
 <script src="./js/opcionesSelect.js"></script>
 </body>
 </html>

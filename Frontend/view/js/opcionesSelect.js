@@ -28,7 +28,7 @@ async function opciones(apiUrl, divisionTerritorial) {
         const campoSelect = document.querySelector(`.${divisionTerritorial}`)
         campoSelect.disabled = false
         campoSelect.innerHTML = `
-        <option selected>${divisionTerritorial[0].toUpperCase() + divisionTerritorial.substring(1,divisionTerritorial.length-1)}</option>
+        <option value="" selected>${divisionTerritorial[0].toUpperCase() + divisionTerritorial.substring(1,divisionTerritorial.length-1)}</option>
         ${opciones.map((value) => {
             if (value.nombre.length > 15) {
                 return `<option value="${value.id}" title="${value.nombre}">${value.nombre.substring(0, 14) + "..."}</option>`

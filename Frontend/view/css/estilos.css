@@ -316,6 +316,7 @@ hr {
     height: 2.8em;
     padding: 0;
     margin: 0 0.35em;
+    font-size: 0.9em;
 }
 
 #btnBuscador:hover {
@@ -383,7 +384,10 @@ button img {
        display: flex;
        flex-direction: column;
     }
-    
+
+    #filtros select {
+        text-align: center;
+    }
   }
 
 /*Diseño para tablet*/
@@ -935,7 +939,7 @@ input, textarea {
 /*Registro de mascotas*/
 .photo {
     background-image: url(https://st2.depositphotos.com/1054904/7850/i/450/depositphotos_78508482-stock-photo-black-cat.jpg);
-    background-position: center;
+    background-position: 35%;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -1021,7 +1025,7 @@ input, textarea {
 @media screen and (max-width:800px){
     
     .registro_mascotas {
-        width: 50%;
+        width: 100%;
         margin: 5px;
     }
 }
