@@ -70,11 +70,8 @@ const formulario = document.getElementById('formulario');
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
 			icono.classList.remove('formulario__grupo-correcto');
 		});
-        document.getElementById('formulario__mensaje').remove();
 	} else {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
 });
-
-
 
