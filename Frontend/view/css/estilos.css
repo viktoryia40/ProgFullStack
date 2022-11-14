@@ -17,7 +17,10 @@ body {
 .despleg {
     background: linear-gradient(#FFFAFA, #f0e552);
     height: auto;
+<<<<<<< HEAD:view/estilos.css
    
+=======
+>>>>>>> develop:Frontend/view/css/estilos.css
 }
 .dws_menu *{
     margin: 0;
@@ -68,29 +71,21 @@ body {
     margin: 0px;
     display: none;
     background-color: #f0e552; /*Le agregué el color de fondo porque sino al desplegar las opciones se confundía con el texto de contenido de la pag*/
+    z-index:20;
     
 }
-    .dws_menu li > ul li a {
+.dws_menu li > ul li a {
         padding: 10px;
         font-size: 14px;
         text-transform: uppercase;
-        
+        z-index: 20;
     }
 .dws_menu li > ul li ul{
     position: absolute;
     right: -150px;
     top: 0;
+    z-index:20;
 }
-
-.dws_menu li:hover > ul {
-    display: block;
-}
-.image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 /* ===== MEDIA ====*/
 .dws_menu [type="checkbox"], 
 .dws_menu label.toggleSubmenu{
@@ -109,6 +104,12 @@ body {
     top: 15px;
     left: 12px;
     font-size: 18px;
+}
+
+@media (min-width:1000px) { 
+    .dws_menu li:hover > ul {
+    display: block;
+  } 
 }
 @media all and (max-width:1000px) {
     .dws_menu {
@@ -171,115 +172,214 @@ background:linear-gradient(#f7ecec, #f5ed81);
     .dws_menu img {
        display: none;
     }
+
 }
 
+/**CAROUSEL SLIDER**/
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  .mySlides {
+      display: none;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 
 /*main Mascotas perdidas-encontradas*/
 
 .publicaciones {
     display: grid;
-    grid-template-areas: 
-    "titulo titulo"
-    "descripcion descripcion"
-    "enlace enlace"
-    "filtros posts";
-    column-gap: 1em;
+    grid-template-columns: auto;
     margin-bottom: 1.5em;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
 }
-
 .publicaciones h1 {
-    grid-area: titulo;
-    justify-self: center;
     margin-top: 0.3em;
-
+    font-weight: 600;
+    font-size: 3em;
 }
 
+.publicaciones h3 {
+    background-color: #e3f8ce;
+    width: 90%;
+    border-radius: 1em;
+}
 
 .publicaciones p {
-    grid-area: descripcion;
-    margin-left: 0.3em;
-    justify-self: center;
     font-weight: 500;
+    margin-bottom: 0.8em;
+    font-size: 1.2em;
 }
 
 #enlaceForm {
-    grid-area: enlace;
     border: 0.1em solid #370101;
     background-color: #e5e9dc;
     padding: 0.5em;
     border-radius: 10px;
     font-weight: 600;
+    text-align: center;
+    justify-self: center;
 }
 
 #enlaceForm a {
-    color: #829c42;
+    color: rgb(102, 150, 57);
 }
 
-.filtros {
-    grid-area: filtros;
-    background-color: #ece697;
-    padding: 1em;
-    width: auto;
-    font-weight: 400;
-    color: #370101;
+hr {
+    width: 98%;
+    margin: 0.8em 0;
 }
 
-.ulPrincipal {
-    padding-left: 0.5em;
+#filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
 }
 
-.ulPrincipal li {
-    list-style: none;
-    padding-top: 0.3em;
-    font-size: 1em;
-    padding-left: 0em;
+#filtros select {
+    width: fit-content;
+    height: 2.5em;
+    margin: 0.35em;
+    background-color: rgb(252, 250, 121);
+    font-weight: bolder;
+    border: none;
 }
 
-.ulSecundaria {
-    padding-left: 1.3em;
-    padding-right: 0.3em;
+#filtros select:hover {
+    background-color: rgb(241, 228, 158);
 }
 
-.ulSecundaria li{
-    list-style: none;
-    padding: 0.2em;
+#filtros option {
+    background-color: rgb(255, 255, 255);
+}
+
+#btnBuscador {
+    background-color: rgb(138, 182, 97);
+    width: 8.5em;
+    height: 2.8em;
+    padding: 0;
+    margin: 0 0.35em;
     font-size: 0.9em;
 }
 
+#btnBuscador:hover {
+    background-color: rgb(111, 136, 87);
+}
+
+button img {
+    width: 1em;
+}
+
+.selectOculto, .botonOculto {
+    display: none !important; 
+}
+
+#btnFiltroEspecializado, #btnFiltroRapido {
+    height: fit-content;
+    padding: 0.3em;
+    margin: 0.5em;
+    justify-self: center;
+    align-self: center;
+    width: 65%;
+    background-color: rgb(218, 204, 134);
+}
+
+#btnFiltroEspecializado:hover, #btnFiltroRapido:hover {
+    background-color: rgb(201, 194, 159);
+}
+
 .publicaciones section {
-    grid-area: posts;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
-    margin-right: 1.5em;
+    gap: 2em;
+    margin: 2em;
 }
 
 .publicaciones .card {
     justify-self: center;
     text-align: center;
     width: 100%;
+    max-width: 30em;
 }
 
 .publicaciones .btn-primary {
     background-color: rgb(248, 219, 88);
-    border-color: #000000;
+    border-color: rgb(0, 0, 0);
 }
 
 .publicaciones .btn-primary:active,
 .btn-primary:hover {
-    background-color: #d9cb83;
-    border-color: #000000;
+    background-color: rgb(248, 219, 88);
+    border-color: rgb(0, 0, 0);
 }
+
 /*Diseño para móvil*/
 
 @media screen and (max-width:575px) {
 
     /*main perdidos-encontrados*/
 
-    .publicaciones {
-        grid-template-columns: 30% auto;
-        gap: 0.3em;
-    }
     .publicaciones p, #enlaceForm {
         text-align: center;
     }
@@ -288,7 +388,10 @@ background:linear-gradient(#f7ecec, #f5ed81);
        display: flex;
        flex-direction: column;
     }
-    
+
+    #filtros select {
+        text-align: center;
+    }
   }
 
 /*Diseño para tablet*/
@@ -297,10 +400,6 @@ background:linear-gradient(#f7ecec, #f5ed81);
 
     /*main perdidos-encontrados*/
 
-    .publicaciones {
-        grid-template-columns: 20% auto;
-        gap: 0.6em;
-    }
     .publicaciones p, #enlaceForm {
         text-align: center;
     }
@@ -378,7 +477,6 @@ background:linear-gradient(#f7ecec, #f5ed81);
 
 }
 /*main Login*/
-
 :root {
     --login-bg:#f8e5ac; 
     --title-bg: #9089cc;
@@ -395,7 +493,6 @@ background:linear-gradient(#f7ecec, #f5ed81);
     justify-content: space-between;
     overflow: hidden;
 }
-
 .login-info-container {
     width: 50%;
     display: flex;
@@ -405,14 +502,12 @@ background:linear-gradient(#f7ecec, #f5ed81);
     padding-top: 0.5rem;
     background-color: var(--login-bg);
 }
-
 .image-container {
     
     width: 50%;
     background-color: var(--image-bg);
     box-sizing: border-box;
 }
-
 .title {
     text-transform: capitalize;
     font-size: 2.25rem;
@@ -420,14 +515,12 @@ background:linear-gradient(#f7ecec, #f5ed81);
     letter-spacing: 1px;
     color: var(--title-bg);
 }
-
 .social-login {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
 }
-
 .social-login-element {
     width: 12.5rem;
     height: 3.75rem;
@@ -440,7 +533,6 @@ background:linear-gradient(#f7ecec, #f5ed81);
     justify-content: center;
     align-items: center;
 }
-
 .social-login-element img {
     width: 1.875rem;
     height: 1.875rem;
@@ -448,16 +540,13 @@ background:linear-gradient(#f7ecec, #f5ed81);
     top: 0;
     left: -0.625rem;
 }
-
 .social-login-element:hover {
     background-color: #fff;
 }
-
 .login-info-container > p {
     font-size: 1.25em;
     margin-top: 1.5em;
 }
-
 .inputs-container {
     height: 55%;
     width: 85%;
@@ -466,13 +555,11 @@ background:linear-gradient(#f7ecec, #f5ed81);
     justify-content: space-around;
     align-items: center;
 }
-
 .input, .btn {
     width: 90%;
     height: 3.125rem;
     font-size: 1em;
 }
-
 .input {
     padding-left: 20px;
     border: none;
@@ -481,11 +568,9 @@ background:linear-gradient(#f7ecec, #f5ed81);
     letter-spacing: 1px;
     box-sizing: border-box;
 }
-
 .input:hover {
     border: 2px solid var(--button-bg);
 }
-
 .btn {
     width: 80%;
     letter-spacing: 1px;
@@ -496,15 +581,17 @@ background:linear-gradient(#f7ecec, #f5ed81);
     background-color: var(--button-bg);
     cursor: pointer;
 }
-
 .inputs-container p {
     margin: 0;
 }
-
 .span {
     color: var(--light-pink);
     font-weight: 600;
     cursor: pointer;
+}
+
+.login-container select {
+    margin-bottom: 32px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -516,29 +603,24 @@ background:linear-gradient(#f7ecec, #f5ed81);
         width: 100%;
         border-radius: 5px;
     }
-    
     .image-container {
         display: none;
     }  
 }
-
 @media screen and (max-width: 650px) {
     .login-container {
         width: 90%;
     }
 }
-
 @media screen and (max-width: 500px) {
     .login-container {
         height: 90%;
     }
-
     .social-login {
         flex-direction: column;
         align-items: center;
         height: 30%;
     }
-
     .login-info-container > p {
         margin: 0;
     }
@@ -603,6 +685,13 @@ input, textarea {
     background-size: cover;
     display: flex;
 }
+<<<<<<< HEAD:view/estilos.css
+=======
+
+.fin_de_compra label {
+    margin: 0.2em;
+}
+>>>>>>> develop:Frontend/view/css/estilos.css
 .finalizar{
     font-size: 18px;
     background-color: #b1af49;
@@ -641,13 +730,7 @@ input, textarea {
 /*-----MascotAdopcion----*/
 
 .title{
-    /* text-align: center;
-    font-size: 60px;
-    color: #0f0b06;
-    margin-top: 100px;
-    font-weight: 500; */
     text-align: center;
-    grid-area: enlace;
     border: 0.1em solid #370101;
     background-color: #e5e9dc;
     padding: 0.5em;
@@ -657,9 +740,9 @@ input, textarea {
 }
 
 .container_adopcion{
-    width: 100%;
+    width: auto;
     max-width: 1200px;
-    height: 430px;
+    /*height: 630px;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -700,28 +783,171 @@ input, textarea {
 /*productos*/
 
 .publicaciones_productos h1 {
-    grid-area: titulo;
     justify-self: center;
     margin-top: 2em;
     margin-bottom: 1em;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 3em;
     background-image: linear-gradient(120deg, #F09819,#EDDE5D 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
     background-position: 0 100%;
 }
 .publicaciones_productos p {
-    grid-area: descripcion;
     justify-self: center;
     font-weight: 400;
     font-size: 1.2em;
     margin-bottom: 2em;
 }
+/* Carrito */
+
+.container--carrito{
+    font-family: 'Inter';
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0e552;
+    width: 60%;
+    margin: 10vh auto;
+    border-radius: 20px;
+}
+.productos{
+    display: flex;
+    flex-direction: row;
+    margin: 1em auto;
+    width: 90%;
+    height: auto;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f2eda4;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.quantity--container{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    width: 13em;
+    background-color: #f2eda4;
+}
+
+#quan{
+    width: 10em;
+    height: 100%;
+    margin: 0;
+    background-color: #f2eda4;
+    text-align: center;
+}
+#quantity{
+    width: 13em;
+    text-align: center;
+}
+.quantity--container input{
+    margin-left: 0;
+    width: 3em;
+    margin: 16px 0;
+    text-align: center;
+}
+.del{
+    margin-left: 1em;
+    width: 50%;
+}
+.descripcion{
+    font-weight: bold;
+}
+.fin{
+    width: 20%;
+    margin: auto;
+}
+.cart{
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    padding: 20px 0;
+}
+.fin--span{
+    font-weight: bold;
+    text-align: center;
+    margin: 10px auto;
+    color: red;
+}
+.fin--container{
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    padding: 20px 0;
+}
+.producto,
+.precio{
+    font-weight: 600;
+}
+@media screen and (max-width:800px){
+    
+    .productos{
+        display: flex;
+        flex-direction: column;
+        margin: 1em auto;
+        width: 90%;
+        height: auto;
+        align-content: space-between;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #f2eda4;
+        padding: 50px;
+        border-radius: 20px;
+    }
+    .quantity--container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        margin: 10px;
+        padding: 0;
+        text-align: center;
+        height: auto;
+        width: auto;
+        background-color: #f2eda4;
+    }
+    .quantity--container input{
+        margin-left: 0;
+        width: 3em;
+        margin: 16px 0;
+    }
+    .del{
+        margin-left: 0;
+        width: 3em;
+    }
+    #quan{
+        width: auto;
+        height: 100%;
+        margin: auto;
+        background-color: #f2eda4;
+
+    }
+    .fin{
+        width: 80%;
+        margin: auto;
+    }
+    .fin--container{
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+}
 /*Registro de mascotas*/
 .photo {
     background-image: url(https://st2.depositphotos.com/1054904/7850/i/450/depositphotos_78508482-stock-photo-black-cat.jpg);
-    background-position: center;
+    background-position: 35%;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -729,7 +955,7 @@ input, textarea {
 }
 
 .registro_mascotas {
-    width: 400px;
+    width: 410px;
     height: auto;
     border: 20px;
     margin: 20px;
@@ -739,7 +965,7 @@ input, textarea {
 }
 
     .registro_mascotas label {
-        font-size: 14px;
+        font-size: 16px;
         display: block;
         width: 100%;
         
@@ -780,10 +1006,20 @@ input, textarea {
             margin: auto;
         }
 
-            .registro_mascotas input[type="submit"]:hover {
-                background-position: right center;
-                color: #370101;
-            }
+        .registro_mascotas input[type="submit"]:hover {
+            background-position: right center;
+            color: #370101;
+        }
+
+        .selects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1em;
+        }
+
+        .registro_mascotas .form-select {
+            margin: 0 0 1em;
+        }
 
 .regis_mas h4 {
     padding: 15px;
@@ -797,7 +1033,11 @@ input, textarea {
 @media screen and (max-width:800px){
     
     .registro_mascotas {
+<<<<<<< HEAD:view/estilos.css
         width: 50%;
+=======
+        width: 100%;
+>>>>>>> develop:Frontend/view/css/estilos.css
         margin: 5px;
     }
 }

@@ -1,0 +1,23 @@
+{
+    "0":{
+        "nombre": "Doggi",
+        "descripcion": "Comida para perros.",
+        "precio":"$400",
+        "imagen":"../imagenes/sieger.jpg",
+        "id":"0"
+    },
+    "1":{
+        "nombre": "Whiskas",
+        "descripcion": "Comida para gatos.",
+        "precio":"$800",
+        "imagen":"../imagenes/whiskas.jpg",
+        "id":"1"
+    },
+    "2":{
+        "nombre": "Hueso de goma",
+        "descripcion": "Un juguete para perros.",
+        "precio":"$350",
+        "imagen":"../imagenes/juguetePerro.jpg",
+        "id":"2"
+    }
+}
