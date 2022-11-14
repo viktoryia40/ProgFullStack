@@ -56,7 +56,7 @@ function getRazas() {
         selectRaza.disabled = true
     }      
     selectRaza.innerHTML = `
-    <option selected>Raza</option>
+    <option value="" selected>Raza</option>
     ${opciones.map((value) => {
         return (
                 `<option value="${value.id}">${value.nombre}</option>`
