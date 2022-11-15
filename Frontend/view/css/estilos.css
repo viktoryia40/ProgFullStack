@@ -17,10 +17,6 @@ body {
 .despleg {
     background: linear-gradient(#FFFAFA, #f0e552);
     height: auto;
-<<<<<<< HEAD:view/estilos.css
-   
-=======
->>>>>>> develop:Frontend/view/css/estilos.css
 }
 .dws_menu *{
     margin: 0;
@@ -637,7 +633,6 @@ button img {
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 2rem;
-    cursor: pointer;
 }
 .contacto, .subtitulo {
     color:#833131;
@@ -685,13 +680,10 @@ input, textarea {
     background-size: cover;
     display: flex;
 }
-<<<<<<< HEAD:view/estilos.css
-=======
 
 .fin_de_compra label {
     margin: 0.2em;
 }
->>>>>>> develop:Frontend/view/css/estilos.css
 .finalizar{
     font-size: 18px;
     background-color: #b1af49;
@@ -1033,11 +1025,7 @@ input, textarea {
 @media screen and (max-width:800px){
     
     .registro_mascotas {
-<<<<<<< HEAD:view/estilos.css
-        width: 50%;
-=======
         width: 100%;
->>>>>>> develop:Frontend/view/css/estilos.css
         margin: 5px;
     }
 }
